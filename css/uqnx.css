@@ -2,6 +2,14 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+.mw-25{
+    max-width: 25% !important;
+
+}
+.w-10{
+    width: 10% !important;
+
+}
 .dropdown:hover .dropdown-menu {
     display: block;
 }
