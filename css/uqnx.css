@@ -10,6 +10,9 @@ body, h1, h2, h3, h4, h5, h6 {
     width: 10% !important;
 
 }
+.marginMakingDiv{
+    margin: 11rem !important;
+}
 .dropdown:hover .dropdown-menu {
     display: block;
 }
