@@ -1,18 +1,19 @@
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif !important;
-}
-
-.mw-25{
+/* add max width 25% option */
+.mw-25 {
     max-width: 25% !important;
-
 }
-.w-10{
+/* add width 10% option */
+.w-10 {
     width: 10% !important;
-
 }
-.marginMakingDiv{
-    margin: 11rem !important;
+/* space between nav (fixed top) and first heading on page */
+.marginMakingDiv {
+    margin: 12rem !important;
 }
+.fixedGapDivBottom {
+    margin-bottom: 6rem !important;
+}
+/* make dropdowns on navbar if needed (if the amount of content becomes too much for individual menu buttons */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -21,29 +22,7 @@ body, h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
-div.form-check-inline {
-    line-height: 1.5rem;
-    display: inline-flex;
-}
-
-label {
-    line-height: 1.5rem;
-    margin-left: 5px;
-}
-
-input[type='radio'] {
-    line-height: 1.5rem;
-    margin: auto;
-}
-
-#iconCol div.row div.col-lg span.htmlToCopy span {
-    padding: 10px 18px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-position-x: center;
-    cursor: pointer;
-}
-
+/* alter inline-group class to space in this context correctly */
 .inline-group {
     max-width: 9rem;
     padding: .5rem;
@@ -53,15 +32,18 @@ input[type='radio'] {
     text-align: right;
 }
 
-.form-control[type="number"]::-webkit-inner-spin-button, .form-control[type="number"]::-webkit-outer-spin-button {
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
+/* Sweet alert styles */
 .swal2-styled.swal2-confirm {
     background-color: #51247a !important;
 }
 
+/* fix nav colours to suit UQ brand */
 li button.nav-link {
     color: #fff !important;
 }
@@ -80,43 +62,111 @@ ul.nav li {
     margin: auto;
 }
 
+/* fix alert colour and margin issues */
+.alert:not(.pattern-library-shim) {
+    color: var(--bs-alert-color) !important;
+    margin-bottom: var(--bs-alert-margin-bottom) !important;
+}
+
+/* Font and font styles for page */
+body, h1, h2, h3, h4, h5, h6, p, label {
+    text-align: unset !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300 !important;
+    line-height: 24px !important;
+}
+
+/* add paddding below headings */
+h2.text-bg-uq, h4.text-bg-info, h2.text-bg-dark {
+    padding-bottom: 1.5rem !important;
+}
+
+/* fix tooltip issues */
+.tooltip::after {
+    content: none !important;
+}
+
+.tooltip {
+    border-style: none !important;
+}
+
+/* arrow for user tours */
 .arrow {
     position: absolute;
-bottom: calc(100% - 10px);
-left: 40%;
-transform: translateX(-50%);
-width: 0;
-height: 0;
-border-left: 30px solid transparent;
-border-right: 30px solid transparent;
-border-top: 30px solid green;
-z-index: 10001;
+    bottom: calc(100% - 10px);
+    left: 40%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid green;
+    z-index: 10001;
 }
 
 .arrow::before {
-content: "";
-position: absolute;
-bottom: calc(100% + 10px);
-left: 50%;
-transform: translateX(-50%);
-width: 20px;
-height: 100px;
-background-color: green;
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 100px;
+    background-color: green;
 }
+
 @keyframes arrowAnimation {
-0% {
-transform: translateY(0);
-}
-50% {
-transform: translateY(-25px);
-}
-100% {
-transform: translateY(0);
-}
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .arrow.animated {
-animation-name: arrowAnimation;
-animation-duration: 1s;
-animation-iteration-count: infinite;
+    animation-name: arrowAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/* Back to top button styles */
+#bttBtn {
+    display: none;
+    position: fixed;
+    bottom: 6rem;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#bttBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li a.jumpToLink {
+    text-decoration: none;
 }
