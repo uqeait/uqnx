@@ -6,6 +6,11 @@
 .w-10 {
     width: 10% !important;
 }
+/* Logo sizing */
+.bannerLogo{
+    width: 50px; 
+    height: auto;
+}
 /* space between nav (fixed top) and first heading on page */
 .marginMakingDiv {
     margin: 12rem !important;
@@ -77,8 +82,8 @@ body, h1, h2, h3, h4, h5, h6, p, label {
 }
 
 /* add paddding below headings */
-h2.text-bg-uq, h4.text-bg-info, h2.text-bg-dark {
-    padding-bottom: 1.5rem !important;
+h1,h2,h3,h4,h5,h6 {
+    padding-top: 0.7rem !important;
 }
 
 /* fix tooltip issues */

@@ -38,17 +38,24 @@
 
         <!-- Fuse fuzzy search -->
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+        <script src="js/uqnx-fuse-data.js"></script>
     </head>
     <body>
         <div class="p-3 bg-uq fixed-top">
-            <div class="mx-auto container-fluid w-25">
+            <div class="mx-auto container-fluid">
                 <div class="row mx-auto my-auto text-center">
-                    <div class="col-sm">
-                        <img class="img-fluid" style="width: 50px; height: auto;" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo" />
+                    <div class="col-sm-3 my-auto text-center">
+                        <img class="img-fluid bannerLogo" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo" />
+                        <i class="fa fa-plus text-white"></i>
+                        <img class="img-fluid bannerLogo" src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo" />
                     </div>
-                    <div class="col-sm my-auto text-center">
-                        <img class="img-fluid" style="width: 50px; height: auto;" src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo"/>
+                    <div class="col-sm-4 mx-auto">
+                        <div class="input-group my-3">
+                            <input class="form-control" type="text" id="uqnxManualsSearch" placeholder="Search UQ NX manuals" data-toggle="tooltip" data-placement="top" title="Type your question to search the entire set of manuals. Results will appear after you type 3 characters." aria-label="Search" aria-describedby="searchButton">
+                            <i class="fas fa-search search-icon d-lg-block d-none"></i>
+                        </div>
                     </div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
             <hr class="text-white" />
@@ -80,14 +87,15 @@
         <div class="marginMakingDiv"></div>
         <!-- Begin body of site -->
         <div class="m-3">
+            <div id="uqnxManualsSearchResults"></div>
             <div class="tab-content mt-3">
                 <!-- Home tab -->
                 <div class="tab-pane fade show active" id="nxHome" role="tabpanel">
                     <h1 class="text-uq text-center">Siemens NX Interactive Manuals</h1>
                     <p>Welcome to the Siemens NX Interactive Manuals for UQ students. You can use the jump links on each tab to go to the knowledge base you need OR search the entire knowledge base using the search bar at the top of the page.</p>
                     <h2 class="text-uq">Introduction to NX at UQ</h2>
-                    <p>Welcome to the Siemens NX Interactive Manuals for UQ students. You can use the jump links on each tab to go to the
-                        knowledge base you need OR search the entire knowledge base using the search bar at the top of the page.</p>
+                    <h3 class="text-uq" id="whatIsSiemensNX">What is Siemens NX?</h3>
+                    <p>NX is an advanced high-end <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Design">CAD</abbr>/<abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Manufacturing">CAM</abbr>/<abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Desing">CAE</abbr>. It is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution for design, manufacturing and team work in various engineering fields.</p>
                     
                 </div>
                 <!-- Tab page - Headings -->
