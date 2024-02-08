@@ -94,7 +94,18 @@ h1,h2,h3,h4,h5,h6 {
 .tooltip {
     border-style: none !important;
 }
-
+/* position the clear search button correctly */
+.clear-search-btn {
+    position: absolute;
+    right: 40px;
+    /* Adjust this value as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 /* arrow for user tours */
 .arrow {
     position: absolute;

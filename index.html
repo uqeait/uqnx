@@ -5,37 +5,27 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>UQ + Siemens NX Interactive Manuals</title>
-        <link rel="icon" type="image/x-icon" href="/img/UQfavicon.png" >
-        
+        <link rel="icon" type="image/x-icon" href="/img/UQfavicon.png">
         <!-- Google fonts to match UQ Extend look and feel -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-            
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <!--jQuery version 3.6.0-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            
         <!-- Bootstrap CSS - uqeait -->
-        <link rel="stylesheet" type="text/css" href="/css/uqnx.css" />
-        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/fontawesome-v6.1.1-free/css/all.css" />
-        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/bootstrap-5.2.1-dist/css/bootstrap.css" />
-     
+        <link rel="stylesheet" type="text/css" href="/css/uqnx.css">
+        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/fontawesome-v6.1.1-free/css/all.css">
+        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/bootstrap-5.2.1-dist/css/bootstrap.css">
         <!-- UQeait Custom JS -->
         <script src="https://uqeait.github.io/uqextend/js/copyNextDiv.js" crossorigin="anonymous"></script>
         <script src="js/uqnx.js"></script>
-
         <!-- Boostrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.js"></script>
-
         <!-- Shepherd User Tours -->
         <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
         <script src="https://uqeait.github.io/uqextend/js/ccUserTours.js"></script>
-        
         <!--Customise alerts on the site-->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
-
         <!-- Fuse fuzzy search -->
         <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
         <script src="js/uqnx-fuse-data.js"></script>
@@ -45,42 +35,43 @@
             <div class="mx-auto container-fluid">
                 <div class="row mx-auto my-auto text-center">
                     <div class="col-sm-3 my-auto text-center">
-                        <img class="img-fluid bannerLogo" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo" />
+                        <img class="img-fluid bannerLogo" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo">
                         <i class="fa fa-plus text-white"></i>
-                        <img class="img-fluid bannerLogo" src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo" />
+                        <img class="img-fluid bannerLogo" src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo">
                     </div>
                     <div class="col-sm-4 mx-auto">
                         <div class="input-group my-3">
-                            <input class="form-control" type="text" id="uqnxManualsSearch" placeholder="Search UQ NX manuals" data-toggle="tooltip" data-placement="top" title="Type your question to search the entire set of manuals. Results will appear after you type 3 characters." aria-label="Search" aria-describedby="searchButton">
+                            <input class="form-control" type="text" id="uqnxManualsSearch" placeholder="Search UQ NX manuals. Results will appear after 3 characters" aria-label="Search" aria-describedby="searchButton">
+                            <i id="clearSearch" class="fa fa-close clear-search-btn"></i>
                             <i class="fas fa-search search-icon d-lg-block d-none"></i>
                         </div>
                     </div>
                     <div class="col-sm-3"></div>
                 </div>
             </div>
-            <hr class="text-white" />
+            <hr class="text-white">
             <nav>
-            <ul class="nav nav-pills" id="myTab">
-                <li class="nav-item">
-                    <button id="nxHomeBtn" class="nav-link active" href="#nxHome" data-bs-toggle="tab">Home</button>
-                </li>
-                <li class="nav-item">
-                    <button id="nxSketchingBtn" class="nav-link" href="#nxSketching" data-bs-toggle="tab">Sketching</button>
-                </li>
-                <li class="nav-item">
-                    <button id="nx3DModellingBtn" class="nav-link" href="#nx3DModelling" data-bs-toggle="tab">3D Modelling</button>
-                </li>
-                <li class="nav-item">
-                    <button id="nxAssemblyModellingBtn" class="nav-link" href="#nxAssemblyModelling" data-bs-toggle="tab">Assembly Modelling</button>
-                </li>
-                <li class="nav-item">
-                    <button id="nx2DDrawingsBtn" class="nav-link" href="#nx2DDrawings" data-bs-toggle="tab">2D Drawings</button>
-                </li>
-                <li class="nav-item">
-                    <button id="uqSiemensHistoryBtn" class="nav-link" href="#uqSiemensHistory" data-bs-toggle="tab">UQ/Siemens History</button>
-                </li>
-            </ul>
-        </nav>
+                <ul class="nav nav-pills" id="myTab">
+                    <li class="nav-item">
+                        <button id="nxHomeBtn" class="nav-link active" href="#nxHome" data-bs-toggle="tab">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="nxSketchingBtn" class="nav-link" href="#nxSketching" data-bs-toggle="tab">Sketching</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="nx3DModellingBtn" class="nav-link" href="#nx3DModelling" data-bs-toggle="tab">3D Modelling</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="nxAssemblyModellingBtn" class="nav-link" href="#nxAssemblyModelling" data-bs-toggle="tab">Assembly Modelling</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="nx2DDrawingsBtn" class="nav-link" href="#nx2DDrawings" data-bs-toggle="tab">2D Drawings</button>
+                    </li>
+                    <li class="nav-item">
+                        <button id="uqSiemensHistoryBtn" class="nav-link" href="#uqSiemensHistory" data-bs-toggle="tab">UQ/Siemens History</button>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <!-- End nav -->
         <!-- Margin to ensure menu is always visible -->
@@ -91,12 +82,26 @@
             <div class="tab-content mt-3">
                 <!-- Home tab -->
                 <div class="tab-pane fade show active" id="nxHome" role="tabpanel">
-                    <h1 class="text-uq text-center">Siemens NX Interactive Manuals</h1>
+                    <h1 class="text-uq text-center">Siemens NX Interactive Manuals - Introduction + Overview</h1>
                     <p>Welcome to the Siemens NX Interactive Manuals for UQ students. You can use the jump links on each tab to go to the knowledge base you need OR search the entire knowledge base using the search bar at the top of the page.</p>
-                    <h2 class="text-uq">Introduction to NX at UQ</h2>
-                    <h3 class="text-uq" id="whatIsSiemensNX">What is Siemens NX?</h3>
-                    <p>NX is an advanced high-end <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Design">CAD</abbr>/<abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Manufacturing">CAM</abbr>/<abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Desing">CAE</abbr>. It is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution for design, manufacturing and team work in various engineering fields.</p>
-                    
+                    <h2 class="text-uq text-center" id="whatIsSiemensNX">What is Siemens NX?</h2>
+                    <p>NX is an advanced high-end <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Design">CAD</abbr>/ <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Manufacturing">CAM</abbr>/ <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Engineering">CAE</abbr>. It is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution for design, manufacturing and team work in various engineering fields.</p>
+                    <h2 class="text-uq text-center" id="howToAccessNX">How To Access NX Software at UQ</h2>
+                    <h3 class="text-uq">EAIT Lab PCs at UQ</h3>
+                    <p>All EAIT Lab PCs at UQ have Siemens NX installed. This includes 50-N301, 49-316a and 45-203 (among others).</p>
+                    <h3 class="text-uq">Student Computer [Windows Operating System Only]</h3>
+                    <ul>
+                        <li>You can download and install NX to a personal computer/laptop. <a href="https://student.eait.uq.edu.au/software/siemens/NX/index.html" title="Install NX on a personal computer at UQ" target="_blank">Carry out these steps</a> to install Siemens NX on personal computer.</li>
+                        <li>When not on campus and connected to the UQ network/Wi-Fi (such as at home or on your mobile hotspot) students will need to <a href="https://my.uq.edu.au/information-and-services/information-technology/working-remotely/vpn-virtual-private-network" title="Install UQ VPN" target="_blank">install and use the UQ VPN</a> to allow NX to connect to the license server.</li>
+                    </ul>
+                    <h3 class="text-uq">EAIT Remote Desktop</h3>
+                    <p>Using the Remote Desktop is the recommended option for students when not using EAIT Lab PC’s. <a href="https://student.eait.uq.edu.au/infrastructure/remote-access/rdp.html" target="_blank" title="Remote Desktop Download and Install">Download and install the Remote Desktop</a> and access Siemens NX as you would on an EAIT Lab PC.</p>
+                    <h2 class="text-uq text-center" id="startNX">Start an NX Session</h2>
+                    <p>Follow the relative sequence below to access the NX software on the device you are using.</p>
+                    <h3 class="text-uq" id="startNXPersonalComputer">Personal Computer, Remote Desktop, Digital Workspace</h3>
+                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> All Apps <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX</p>
+                    <h3 class="text-uq">EAIT Lab computer and Remote Desktop</h3>
+                    <p>Desktop <i class="fa fa-angle-right"></i> Laboratory Software <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX</p>
                 </div>
                 <!-- Tab page - Headings -->
                 <!-- NX Sketching -->
@@ -118,37 +123,42 @@
                 <!-- About Section -->
                 <div class="tab-pane fade" id="uqSiemensHistory" role="tabpanel">
                     <h1 class="text-uq text-center">UQ/Siemens History</h1>
-                    <p>UQ, Siemens and the Australian Government have been working to build closer collaboration between Australia and
+                    <p>
+                        UQ, Siemens and the Australian Government have been working to build closer collaboration between Australia and
                         Germany to prepare for Industry 4.0 - the fourth industrial revolution. To read more about the partnership you can
-                        visit the links below.</p>
+                        visit the links below.
+                    </p>
                     <ul>
-                        <li><a href="https://www.uq.edu.au/news/article/2018/11/500m-plus-software-grant-equip-students-digital-revolution"
-                                title="Siemens Software Grant to UQ Article" target="_blank" rel="noopener">$500m-plus software grant to
-                                equip students for digital revolution - Nov 2018</a></li>
-                        <li><a href="https://resources.sw.siemens.com/en-US/case-study-university-of-queensland"
-                                title="Preparing the workforce of the future - Siemens Blog" target="_blank" rel="noopener">Preparing the
-                                workforce of the future with Siemens solutions - The UQ Case Study</a></li>
-                        <li><a href="https://blogs.sw.siemens.com/academic/siemens-software-bridges-the-gap-between-industry-and-academia-at-the-university-of-queensland/"
-                                title="Siemens bridging the gap between industry and academic - Siemens Blog" target="_blank"
-                                rel="noopener">Siemens Software Bridges the Gap Between Industry and Academia at the University of
-                                Queensland - Jun 2021</a></li>
+                        <li>
+                            <a href="https://www.uq.edu.au/news/article/2018/11/500m-plus-software-grant-equip-students-digital-revolution" title="Siemens Software Grant to UQ Article" target="_blank" rel="noopener">$500m-plus software grant to equip students for digital revolution - Nov 2018</a>
+                        </li>
+                        <li>
+                            <a href="https://resources.sw.siemens.com/en-US/case-study-university-of-queensland" title="Preparing the workforce of the future - Siemens Blog" target="_blank" rel="noopener">
+                                Preparing the
+                                workforce of the future with Siemens solutions - The UQ Case Study
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blogs.sw.siemens.com/academic/siemens-software-bridges-the-gap-between-industry-and-academia-at-the-university-of-queensland/" title="Siemens bridging the gap between industry and academic - Siemens Blog" target="_blank" rel="noopener">
+                                Siemens Software Bridges the Gap Between Industry and Academia at the University of
+                                Queensland - Jun 2021
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="fixedGapDivBottom"></div>
             <footer class="text-bg-uq p-2 fixed-bottom text-center">
-                <img alt="UQ Logo" class="img-fluid p-2 float-start" width="170px"
-                    src="https://uqeait.github.io/learnuq/uq-logo--reversed.svg" />
-                <p>© The University of Queensland ABN: 63 942 912 684 <abbr
-                        title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS:</abbr> <a
-                        class="text-white text-decoration-none" href="https://www.uq.edu.au/about/cricos-link"
-                        title="UQ Cricos link" target="_blank" rel="noopener">00025B</a> <abbr
-                        title="Tertiary Education Quality and Standards Agency">TEQSA:</abbr> <a
-                        class="text-white text-decoration-none" href="https://www.uq.edu.au/about/teqsa-link" title="UQ TEQSA Link"
-                        target="_blank" rel="noopener">PRV12080</a></p>
+                <img alt="UQ Logo" class="img-fluid p-2 float-start" width="170px" src="https://uqeait.github.io/learnuq/uq-logo--reversed.svg">
+                <p>© The University of Queensland ABN: 63 942 912 684
+                    <abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS:</abbr>
+                    <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/cricos-link" title="UQ Cricos link" target="_blank" rel="noopener">00025B</a>
+                    <abbr title="Tertiary Education Quality and Standards Agency">TEQSA:</abbr>
+                    <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/teqsa-link" title="UQ TEQSA Link" target="_blank" rel="noopener">PRV12080</a>
+                </p>
             </footer>
             <button id="bttBtn" data-toggle="tooltip" data-placement="top" title="Back to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
-    </body>
+        </body>
     </html>
