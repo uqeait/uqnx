@@ -3,16 +3,30 @@ window.addEventListener("load", function () {
     {
       id: "whatIsSiemensNX",
       question: "What is Siemens NX?",
-      answer: "NX is an advanced high-end CAD/CAM/CAE. It is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution for design, manufacturing and team work in various engineering fields.",
+      answer: $("div#whatIsSiemensNX").html(),
       category: "Home",
-      sectionID: "nxHome", 
+      sectionID: "nxHome",
     },
     {
       id: "howToAccessNX",
       question: "How To Access NX Software at UQ",
-      answer: $('div#howToAccessNX').html(),
+      answer: $("div#howToAccessNX").html(),
       category: "Home",
-      sectionID: "nxHome",          
+      sectionID: "nxHome",
+    },
+    {
+      id: "nxCreateNewPart",
+      question: "How To Create A New Part in NX",
+      answer: $("div#nxCreateNewPart").html(),
+      category: "Home",
+      sectionID: "nxHome",
+    },
+    {
+      id: "nxOpenExistingPart",
+      question: "How To Open an Existing Part in NX",
+      answer: $("div#nxOpenExistingPart").html(),
+      category: "Home",
+      sectionID: "nxHome",
     },
   ];
 
@@ -51,36 +65,52 @@ window.addEventListener("load", function () {
         return acc;
       }, {});
 
-      // Iterate over each category and append questions
+      let accordionIndex = 0;
+      let contentElements = "";
+
       for (const category in resultsByCategory) {
         // Limit results to top 5 for each category
         let topResults = resultsByCategory[category].slice(0, 5);
 
         let contentElements = topResults
           .map((content) => {
+            let accordionId = `accordion${accordionIndex++}`;
+
             return `
-          <h3 class="text-uq">${content.question}</h3>
-          <p>${content.answer}</p>
-          ${
-            content.image
-              ? `<img src="${content.image}" alt="${content.question}">`
-              : ""
-          }
-          <a class="btn btn-primary d-block w-25 mx-auto" href="#" onclick="switchTabAndScroll('${
-            content.sectionID
-          }', '${
+          <div class="accordion-item">
+            <h2 class="accordion-header p-0 m-0">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${accordionId}Content">
+                ${content.question}
+              </button>
+            </h2>
+            <div id="${accordionId}Content" class="accordion-collapse collapse" data-bs-parent="#accordion">
+              <div class="accordion-body">
+                <p>${content.answer}</p>
+                ${
+                  content.image
+                    ? `<img src="${content.image}" alt="${content.question}">`
+                    : ""
+                }
+                <a class="btn btn-primary d-block w-25 mx-auto" href="#" onclick="switchTabAndScroll('${
+                  content.sectionID
+                }', '${
               content.id
             }')">Jump to result <i class="fa fa-fast-forward"></i></a>
-        `;
+              </div>
+          </div>
+        </div>
+      `;
           })
           .join("");
 
         // Add the category and its content to the results container
         resultsContainer.innerHTML += `
-        <h1 class="text-uq text-center">Search Results</h1>
-        ${contentElements}
-        <hr />
-      `;
+    <h1 class="text-uq text-center">Search Results</h1>
+   <div class="accordion" id="accordion">
+    ${contentElements}
+  </div>
+    <hr />
+  `;
       } 
     });
     
