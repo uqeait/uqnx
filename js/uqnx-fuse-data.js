@@ -85,12 +85,18 @@ window.addEventListener("load", function () {
     });
     
     window.switchTabAndScroll = function (tabId, contentId) {
-    // Switch to the relevant tab
-    document.getElementById(tabId + "Btn").click();
+      // Switch to the relevant tab
+      document.getElementById(tabId + "Btn").click();
 
-    // Scroll to the content
-    setTimeout(function(){document.getElementById(contentId).scrollIntoView();}, 500)
-  };
+      // Scroll to the content
+      setTimeout(function () {
+        var element = document.getElementById(contentId);
+        var rect = element.getBoundingClientRect();
+        var absoluteElementTop = rect.top + window.pageYOffset;
+        var adjustedScrollPosition = absoluteElementTop - 14.5 * 16; // 14.5rem assuming 16px as the base font-size
+        window.scrollTo({ top: adjustedScrollPosition, behavior: "smooth" });
+      }, 500);
+    };
   const searchInput = document.getElementById("uqnxManualsSearch");
   const clearSearchBtn = document.getElementById("clearSearch");
 
