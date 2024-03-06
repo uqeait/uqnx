@@ -35,6 +35,27 @@ window.addEventListener("load", function () {
       category: "Home",
       sectionID: "nxHome",
     },
+    {
+      id: "nxCloseExit",
+      question: "Closing and Exiting",
+      answer: $("div#nxCloseExit").html(),
+      category: "Home",
+      sectionID: "nxHome",
+    },
+    {
+      id: "nxMouseBtn1",
+      question: "Mouse Button 1",
+      answer: $("div#nxMouseBtn1").html(),
+      category: "Home",
+      sectionID: "nxHome",
+    },
+    {
+      id: "nxMouseBtn2",
+      question: "Mouse Button 2",
+      answer: $("div#nxMouseBtn2").html(),
+      category: "Home",
+      sectionID: "nxHome",
+    },
   ];
 
   const options = {
