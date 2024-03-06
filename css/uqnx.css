@@ -11,6 +11,9 @@
     width: 50px; 
     height: auto;
 }
+i {
+    font-style: normal !important;
+}
 /* space between nav (fixed top) and first heading on page */
 .marginMakingDiv {
     margin: 12rem !important;
