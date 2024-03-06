@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
     {
       id: "howToAccessNX",
       question: "How To Access NX Software at UQ",
-      answer: "<h3 class=\"text-uq\">EAIT Lab PCs at UQ</h3>\n<p>All EAIT Lab PCs at UQ have Siemens NX installed. This includes 50-N301, 49-316a and 45-203 (among others).</p>\n<h3 class=\"text-uq\">Student Computer [Windows Operating System Only]</h3>\n<ul>\n<li>You can download and install NX to a personal computer/laptop. <a href=\"https://student.eait.uq.edu.au/software/siemens/NX/index.html\" title=\"Install NX on a personal computer at UQ\" target=\"_blank\">Carry out these steps</a> to install Siemens NX on personal computer.</li>\n<li>When not on campus and connected to the UQ network/Wi-Fi (such as at home or on your mobile hotspot) students will need to <a href=\"https://my.uq.edu.au/information-and-services/information-technology/working-remotely/vpn-virtual-private-network\" title=\"Install UQ VPN\" target=\"_blank\">install and use the UQ VPN</a> to allow NX to connect to the license server.</li>\n</ul>\n<h3 class=\"text-uq\">EAIT Remote Desktop</h3>\n<p>Using the Remote Desktop is the recommended option for students when not using EAIT Lab PC’s. <a href=\"https://student.eait.uq.edu.au/infrastructure/remote-access/rdp.html\" target=\"_blank\" title=\"Remote Desktop Download and Install\">Download and install the Remote Desktop</a> and access Siemens NX as you would on an EAIT Lab PC.</p>\n",
+      answer: $('div#howToAccessNX').html(),
       category: "Home",
       sectionID: "nxHome",          
     },
@@ -78,7 +78,6 @@ window.addEventListener("load", function () {
         // Add the category and its content to the results container
         resultsContainer.innerHTML += `
         <h1 class="text-uq text-center">Search Results</h1>
-        <h2 class="text-uq">${category}</h2>
         ${contentElements}
         <hr />
       `;
