@@ -31,6 +31,18 @@
         <script src="js/uqnx-fuse-data.js"></script> 
     </head>
     <body>
+        <div class="modal fade" id="imageModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" style="max-width: 75%;">
+                <div class="modal-content">
+                    <div class="modal-close-container position-absolute start-50 translate-middle" style="top: -30px;">
+                        <button type="button" class="btn btn-dark btn-lg close-modal">Close Image</button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="p-3 bg-uq fixed-top">
             <div class="mx-auto container-fluid">
                 <div class="row mx-auto my-auto text-center">
@@ -270,7 +282,96 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <h3 class="text-uq">MB3 - Mouse Button 3</h3>
+                <div id="nxMouseBtn3">
+                    <div class="row">
+                        <div class="col-md">
+                            <ul>
+                                <li>The right mouse button is referred to as MB3</li>
+                                <li>MB3 used to access the user interface pop-up menus.</li>
+                                <li>You can access the subsequent options that pop up depending on the selection mode and Application.</li>
+                            </ul>                           
+                        </div>
+                        <div class="col-md">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/MB3 Example.png" alt="Mouse Button 3" />
+                                <figcaption>NX - Mouse Button 3</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-uq">Mouse Button Combinations</h3>
+                <div id="nxMouseBtnCombos">
+                    <div class="row">
+                        <div class="col-md">
+                            <h4 class="text-uq">Zoom In/Out</h4>
+                            <ul>
+                                <li>Press and hold both MB1 and MB2 simultaneously and drag (or use wheel) OR</li>
+                                <li>Press and hold <span class="badge text-bg-secondary h6 border border-dark">Ctrl</span> button on the keyboard and then press and drag the MB2</li>
+                            </ul>
+                        </div>
+                        <div class="col-md">
+                             <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Zoom.png" alt="Zoom in NX" />
+                                <figcaption></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <h4 class="text-uq">Pan</h4>
+                            <ul>
+                                <li>Press and hold both the MB2 and MB3 simultaneously and drag OR</li>
+                                <li>Press and hold <span class="badge text-bg-secondary h6 border border-dark">Shift</span> button on the keyboard and press and drag the MB2</li>
+                            </ul>
+                        </div>
+                        <div class="col-md">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Pan.png" alt="Pan in NX" />
+                                <figcaption></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-uq text-center">User Interface</h2>
+                    <h3 class="text-uq">Siemens NX Curriculum - User Interface</h3>
+                    <div id="nxUserInterface">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>The NX User Interface is explained in the video below [15min] and the subsequent sections.</p>
+                            <p>After starting NX the main screen shows the Discovery Centre Tab [also known as Welcome Page] which contains the
+                                following:</p>
+                            <ul>
+                                <li><strong>Discovery NX [Highlights]:</strong> Features and highlights NX functionality.</li>
+                                <li><strong>What’s New:</strong> Information on software enhancements.</li>
+                                <li><strong>Start here - Design:</strong> NX Design quick course. Guided exercises.</li>
+                                <li><strong>Start here - Manufacturing:</strong> NX Manufacturing quick course. Guided exercises.</li>
+                                <li><strong>First Tips</strong> - Overview of the screen layout, and basic commands.</li>
+                            </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="text-center">
+                                <img class="img-fluid" src="img/Welcome Screen.png" alt="Welcome Screen" />
+                                <figcaption>NX - Welcome Screen (Click to enlarge)</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md">
+                                <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/PLGNBwZcts0?si=IpDuVH4DyIeG31Q1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <h3 class="text-uq">Interface Layout</h3>
+                    <div id="nxInterfaceLayout">
+                    <p>The important sections of the layout are shown below.</p>
+                    <!--MAKE THIS INTO A H5P-->
+                    <figure class="text-center d-block w-50 mx-auto">
+                        <img class="img-fluid" src="img/NX Layout Overview.png" alt="NX Layout Overview" />
+                        <figcaption>NX - Layout Overview (Click to enlarge)</figcaption>
+                    </figure>
+                </div>
+        </div>
                 <!-- Tab page - Headings -->
                 <!-- NX Sketching -->
                 <div class="tab-pane fade" id="nxSketching" role="tabpanel">
@@ -310,5 +411,27 @@
                 </p>
             </footer>
             <button id="bttBtn" data-toggle="tooltip" data-placement="top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+            <script>
+                const images = document.querySelectorAll('img'); // Select all images
+                const imageModal = document.getElementById('imageModal');
+                const modalImage = imageModal.querySelector('img');
+
+                images.forEach(image => {
+                    image.addEventListener('click', () => {
+                        modalImage.src = image.src;
+                        modalImage.alt = image.alt; // Set alt text
+                        const myModal = new bootstrap.Modal(imageModal);
+                        myModal.show();
+                    });
+                });
+            </script>
+            <script>
+                const closeButton = document.querySelector('.close-modal');
+
+                closeButton.addEventListener('click', () => {
+                    const myModal = bootstrap.Modal.getInstance(imageModal) // Get the modal instance
+                    myModal.hide(); // Use the Bootstrap method to hide the modal
+                });
+            </script>
         </body>
     </html>
