@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,6 +18,19 @@
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'G-H8PW4WD9CT');
+             document.getElementById('uqnxManualsSearchResults').addEventListener('click', (event) => {
+                const clickedElement = event.target;
+                const accordionButton = clickedElement.closest('.accordion-button');
+
+                if (accordionButton) {
+                    console.log('Accordion clicked');
+                    const action = accordionButton.classList.contains('collapsed') ? 'Accordion Opened' : 'Accordion Closed';
+                    gtag('event', action, {
+                        'event_category': 'Accordion',
+                        'event_label': accordionButton.innerText
+                    });
+                }
+            });
             document.querySelectorAll('.accordion-button').forEach(button => {
                 button.addEventListener('click', () => {
                     console.log('accordion clicked')
