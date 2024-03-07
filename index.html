@@ -24,7 +24,7 @@
 
                 if (accordionButton) {
                     console.log('Accordion clicked');
-                    const action = accordionButton.classList.contains('collapsed') ? 'Accordion Opened' : 'Accordion Closed';
+                    const action = accordionButton.classList.contains('collapsed') ? 'Accordion Closed' : 'Accordion Opened';
                     gtag('event', action, {
                         'event_category': 'Accordion',
                         'event_label': accordionButton.innerText
@@ -35,7 +35,7 @@
                 button.addEventListener('click', () => {
                     console.log('accordion clicked')
                     // Check if the accordion is being opened or closed
-                    let action = button.classList.contains('collapsed') ? 'Accordion Opened' : 'Accordion Closed';
+                    let action = button.classList.contains('collapsed') ? 'Accordion Closed' : 'Accordion Opened';
                     gtag('event', action, {
                         'event_category': 'Accordion',
                         'event_label': button.innerText
