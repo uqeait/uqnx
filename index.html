@@ -10,15 +10,48 @@
     <!-- Google fonts to match UQ Extend look and feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8PW4WD9CT"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-H8PW4WD9CT');
+            document.querySelectorAll('.accordion-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log('accordion clicked')
+                    // Check if the accordion is being opened or closed
+                    let action = button.classList.contains('collapsed') ? 'Accordion Opened' : 'Accordion Closed';
+                    gtag('event', action, {
+                        'event_category': 'Accordion',
+                        'event_label': button.innerText
+                    });
+                });
+            });
+            var analyticsTimeout;
+            document.getElementById('uqnxManualsSearch').addEventListener('keyup', (e) => {
+                const searchQuery = e.target.value;
+                //const results = fuse.search(searchQuery);
+                // Send event to Google Analytics
+                clearTimeout(analyticsTimeout);
+                analyticsTimeout = setTimeout(function () {
+                    console.log("Sending event to Google Analytics");
+                    gtag("event", "Search", {
+                        event_category: "UQ/NX Manuals Search",
+                        event_label: searchQuery.toLowerCase(),
+                    });
+                }, 500);
+            })
+        })
+    </script>
     <!--jQuery version 3.6.0-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
         integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Bootstrap CSS - uqeait -->
-    <link rel="stylesheet" type="text/css" href="/css/uqnx.css">
+    <link rel="stylesheet" type="text/css" href="css/uqnx.css">
     <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/fontawesome-v6.1.1-free/css/all.css">
     <link rel="stylesheet" type="text/css"
         href="https://uqeait.github.io/uqextend/bootstrap-5.2.1-dist/css/bootstrap.css">
