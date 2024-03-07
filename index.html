@@ -1,188 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>UQ + Siemens NX Interactive Manuals</title>
-        <link rel="icon" type="image/x-icon" href="https://uqeait.github.io/uqnx/img/UQfavicon.png">
-        <!-- Google fonts to match UQ Extend look and feel -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!--jQuery version 3.6.0-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- Bootstrap CSS - uqeait -->
-        <link rel="stylesheet" type="text/css" href="/css/uqnx.css">
-        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/fontawesome-v6.1.1-free/css/all.css">
-        <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/bootstrap-5.2.1-dist/css/bootstrap.css">
-        <!-- UQeait Custom JS -->
-        <script src="https://uqeait.github.io/uqextend/js/copyNextDiv.js" crossorigin="anonymous"></script>
-        <script src="js/uqnx.js"></script>
-        <!-- Boostrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.js"></script>
-        <!-- Shepherd User Tours -->
-        <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
-        <script src="https://uqeait.github.io/uqextend/js/ccUserTours.js"></script>
-        <!--Customise alerts on the site-->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
-        <!-- Fuse fuzzy search -->
-        <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
-        <script src="js/uqnx-fuse-data.js"></script> 
-    </head>
-    <body>
-        <div class="modal fade" id="imageModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered" style="max-width: 75%;">
-                <div class="modal-content">
-                    <div class="modal-close-container position-absolute start-50 translate-middle" style="top: -30px;">
-                        <button type="button" class="btn btn-dark btn-lg close-modal">Close Image</button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="" alt="" class="img-fluid">
-                    </div>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UQ + Siemens NX Interactive Manuals</title>
+    <link rel="icon" type="image/x-icon" href="https://uqeait.github.io/uqnx/img/UQfavicon.png">
+    <!-- Google fonts to match UQ Extend look and feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!--jQuery version 3.6.0-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+        integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap CSS - uqeait -->
+    <link rel="stylesheet" type="text/css" href="/css/uqnx.css">
+    <link rel="stylesheet" type="text/css" href="https://uqeait.github.io/uqextend/fontawesome-v6.1.1-free/css/all.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://uqeait.github.io/uqextend/bootstrap-5.2.1-dist/css/bootstrap.css">
+    <!-- UQeait Custom JS -->
+    <script src="https://uqeait.github.io/uqextend/js/copyNextDiv.js" crossorigin="anonymous"></script>
+    <script src="js/uqnx.js"></script>
+    <!-- Boostrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.js"></script>
+    <!-- Shepherd User Tours -->
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
+    <script src="https://uqeait.github.io/uqextend/js/ccUserTours.js"></script>
+    <!--Customise alerts on the site-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
+    <!-- Fuse fuzzy search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+    <script src="js/uqnx-fuse-data.js"></script>
+</head>
+
+<body>
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 75%;">
+            <div class="modal-content">
+                <div class="modal-close-container position-absolute start-50 translate-middle" style="top: -30px;">
+                    <button type="button" class="btn btn-dark btn-lg close-modal">Close Image</button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-        <div class="p-3 bg-uq fixed-top">
-            <div class="mx-auto container-fluid">
-                <div class="row mx-auto my-auto text-center">
-                    <div class="col-sm-3 my-auto text-center">
-                        <img class="img-fluid bannerLogo" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo">
-                        <i class="fa fa-plus text-white"></i>
-                        <img class="img-fluid bannerLogo" src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo">
-                    </div>
-                    <div class="col-sm-4 mx-auto">
-                        <div class="input-group my-3">
-                            <input class="form-control" type="text" id="uqnxManualsSearch" placeholder="Search UQ NX manuals. Results will appear after 3 characters" aria-label="Search" aria-describedby="searchButton">
-                            <i id="clearSearch" class="fa fa-close clear-search-btn"></i>
-                            <i class="fas fa-search search-icon d-lg-block d-none"></i>
-                        </div>
-                    </div>
-                    <div class="col-sm-3"></div>
+    </div>
+    <div class="p-3 bg-uq fixed-top">
+        <div class="mx-auto container-fluid">
+            <div class="row mx-auto my-auto text-center">
+                <div class="col-sm-3 my-auto text-center">
+                    <img class="img-fluid bannerLogo" src="img/Siemens-blue-s-logo.png" alt="Siemens Logo">
+                    <i class="fa fa-plus text-white"></i>
+                    <img class="img-fluid bannerLogo"
+                        src="https://uqeait.github.io/uqextend/img/uq-logo-badge-white.png" alt="UQ Logo">
                 </div>
-            </div>
-            <hr class="text-white">
-            <nav>
-                <ul class="nav nav-pills" id="myTab">
-                    <li class="nav-item">
-                        <button id="nxHomeBtn" class="nav-link active" href="#nxHome" data-bs-toggle="tab">Home</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="nxSketchingBtn" class="nav-link" href="#nxSketching" data-bs-toggle="tab">Sketching</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="nx3DModellingBtn" class="nav-link" href="#nx3DModelling" data-bs-toggle="tab">3D Modelling</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="nxAssemblyModellingBtn" class="nav-link" href="#nxAssemblyModelling" data-bs-toggle="tab">Assembly Modelling</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="nx2DDrawingsBtn" class="nav-link" href="#nx2DDrawings" data-bs-toggle="tab">2D Drawings</button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="uqSiemensHistoryBtn" class="nav-link" href="#uqSiemensHistory" data-bs-toggle="tab">UQ/Siemens History</button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- End nav -->
-        <!-- Margin to ensure menu is always visible -->
-        <div class="marginMakingDiv"></div>
-        <!-- Begin body of site -->
-        <div class="m-3">
-            <div id="uqnxManualsSearchResults"></div>
-            <div class="tab-content mt-3">
-                <!-- Home tab -->
-                <div class="tab-pane fade show active" id="nxHome" role="tabpanel">
-                    <h1 class="text-uq text-center">Siemens NX Interactive Manuals</h1>
-                    <h2 class="text-uq text-center">Introduction + Overview</h2>
-                    <p>Welcome to the Siemens NX Interactive Manuals for UQ students. You can use the jump links on each tab to go to the knowledge base you need OR search the entire knowledge base using the search bar at the top of the page.</p>
-                    <hr />
-                    <h2 class="text-uq text-center">What is Siemens NX?</h2>
-                    <div id="whatIsSiemensNX">
-                    <p>NX is an advanced high-end <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Design">CAD</abbr>/ <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Manufacturing">CAM</abbr>/ <abbr class="text-uq" data-toggle="tooltip" data-placement="top" title="Computer-Aided Engineering">CAE</abbr>. It is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution for design, manufacturing and team work in various engineering fields.</p>
+                <div class="col-sm-4 mx-auto">
+                    <div class="input-group my-3">
+                        <input class="form-control" type="text" id="uqnxManualsSearch"
+                            placeholder="Search UQ NX manuals. Results will appear after 3 characters"
+                            aria-label="Search" aria-describedby="searchButton">
+                        <i id="clearSearch" class="fa fa-close clear-search-btn"></i>
+                        <i class="fas fa-search search-icon d-lg-block d-none"></i>
                     </div>
-                    <hr />
-                    <h2 class="text-uq text-center">How To Access NX Software at UQ</h2>
-                    <div id="howToAccessNX">
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+        <hr class="text-white">
+        <nav>
+            <ul class="nav nav-pills" id="myTab">
+                <li class="nav-item">
+                    <button id="nxHomeBtn" class="nav-link active" href="#nxHome" data-bs-toggle="tab">Home</button>
+                </li>
+                <li class="nav-item">
+                    <button id="nxSketchingBtn" class="nav-link" href="#nxSketching"
+                        data-bs-toggle="tab">Sketching</button>
+                </li>
+                <li class="nav-item">
+                    <button id="nx3DModellingBtn" class="nav-link" href="#nx3DModelling" data-bs-toggle="tab">3D
+                        Modelling</button>
+                </li>
+                <li class="nav-item">
+                    <button id="nxAssemblyModellingBtn" class="nav-link" href="#nxAssemblyModelling"
+                        data-bs-toggle="tab">Assembly Modelling</button>
+                </li>
+                <li class="nav-item">
+                    <button id="nx2DDrawingsBtn" class="nav-link" href="#nx2DDrawings" data-bs-toggle="tab">2D
+                        Drawings</button>
+                </li>
+                <li class="nav-item">
+                    <button id="uqSiemensHistoryBtn" class="nav-link" href="#uqSiemensHistory"
+                        data-bs-toggle="tab">UQ/Siemens History</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- End nav -->
+    <!-- Margin to ensure menu is always visible -->
+    <div class="marginMakingDiv"></div>
+    <!-- Begin body of site -->
+    <div class="m-3">
+        <div id="uqnxManualsSearchResults"></div>
+        <div class="tab-content mt-3">
+            <!-- Home tab -->
+            <div class="tab-pane fade show active" id="nxHome" role="tabpanel">
+                <h1 class="text-uq text-center">Siemens NX Interactive Manuals</h1>
+                <h2 class="text-uq text-center">Introduction + Overview</h2>
+                <p>Welcome to the Siemens NX Interactive Manuals for UQ students. You can use the jump links on each tab
+                    to go to the knowledge base you need OR search the entire knowledge base using the search bar at the
+                    top of the page.</p>
+                <hr />
+                <h2 class="text-uq text-center">What is Siemens NX?</h2>
+                <div id="whatIsSiemensNX">
+                    <p>NX is an advanced high-end <abbr class="text-uq" data-toggle="tooltip" data-placement="top"
+                            title="Computer-Aided Design">CAD</abbr>/ <abbr class="text-uq" data-toggle="tooltip"
+                            data-placement="top" title="Computer-Aided Manufacturing">CAM</abbr>/ <abbr class="text-uq"
+                            data-toggle="tooltip" data-placement="top" title="Computer-Aided Engineering">CAE</abbr>. It
+                        is used for design, analysis and manufacturing. It is intended as a one stop shop (OSS) solution
+                        for design, manufacturing and team work in various engineering fields.</p>
+                </div>
+                <hr />
+                <h2 class="text-uq text-center">How To Access NX Software at UQ</h2>
+                <div id="howToAccessNX">
                     <h3 class="text-uq">EAIT Lab PCs at UQ</h3>
-                    <p>All EAIT Lab PCs at UQ have Siemens NX installed. This includes 50-N301, 49-316a and 45-203 (among others).</p>
+                    <p>All EAIT Lab PCs at UQ have Siemens NX installed. This includes 50-N301, 49-316a and 45-203
+                        (among others).</p>
                     <h3 class="text-uq">Student Computer [Windows Operating System Only]</h3>
                     <ul>
-                        <li>You can download and install NX to a personal computer/laptop. <a href="https://student.eait.uq.edu.au/software/siemens/NX/index.html" title="Install NX on a personal computer at UQ" target="_blank" rel="noopener">Carry out these steps</a> to install Siemens NX on personal computer.</li>
-                        <li>When not on campus and connected to the UQ network/Wi-Fi (such as at home or on your mobile hotspot) students will need to <a href="https://my.uq.edu.au/information-and-services/information-technology/working-remotely/vpn-virtual-private-network" title="Install UQ VPN" target="_blank" rel="noopener">install and use the UQ VPN</a> to allow NX to connect to the license server.</li>
+                        <li>You can download and install NX to a personal computer/laptop. <a
+                                href="https://student.eait.uq.edu.au/software/siemens/NX/index.html"
+                                title="Install NX on a personal computer at UQ" target="_blank" rel="noopener">Carry out
+                                these steps</a> to install Siemens NX on personal computer.</li>
+                        <li>When not on campus and connected to the UQ network/Wi-Fi (such as at home or on your mobile
+                            hotspot) students will need to <a
+                                href="https://my.uq.edu.au/information-and-services/information-technology/working-remotely/vpn-virtual-private-network"
+                                title="Install UQ VPN" target="_blank" rel="noopener">install and use the UQ VPN</a> to
+                            allow NX to connect to the license server.</li>
                     </ul>
                     <h3 class="text-uq" id="digitalWorkspace">Digital Workspace</h3>
-                    <p>Students can access NX via the UQ Digital Workspace. <a href="https://my.uq.edu.au/information-and-services/information-technology/working-remotely/uq-digital-workspace  " target="_blank" title="Access UQ Digital Workspace" rel="noopener">Instructions for accessing digital workspace are available here</a>.</p>
-                    <p>Once Vmware Horizon Client has been installed, you can then <a href="https://login.vdi.uq.edu.au/" target="_blank" title="Launch UQ Digital Workspace Portal" rel="noopener">launch UQ Digital Workspace portal</a>, and after logging in open the EAIT-GPU-Desktop to run a virtual desktop session and access NX under:</p>
+                    <p>Students can access NX via the UQ Digital Workspace. <a
+                            href="https://my.uq.edu.au/information-and-services/information-technology/working-remotely/uq-digital-workspace  "
+                            target="_blank" title="Access UQ Digital Workspace" rel="noopener">Instructions for
+                            accessing digital workspace are available here</a>.</p>
+                    <p>Once Vmware Horizon Client has been installed, you can then <a
+                            href="https://login.vdi.uq.edu.au/" target="_blank"
+                            title="Launch UQ Digital Workspace Portal" rel="noopener">launch UQ Digital Workspace
+                            portal</a>, and after logging in open the EAIT-GPU-Desktop to run a virtual desktop session
+                        and access NX under:</p>
                     <p>Start <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX.</p>
-                    </div>
-                    <hr />
-                    <div id="startNX">
+                </div>
+                <hr />
+                <div id="startNX">
                     <h2 class="text-uq text-center">Start an NX Session</h2>
                     <p>Follow the relative sequence below to access the NX software on the device you are using.</p>
                     <h3 class="text-uq" id="startNXPersonalComputer">Local Software Install (your personal device)</h3>
-                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> All Apps <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX</p>
+                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> All Apps <i class="fa fa-angle-right"></i>
+                        Siemens NX <i class="fa fa-angle-right"></i> NX</p>
                     <h3 class="text-uq">UQ Digital Workspace</h3>
-                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX</p>
+                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> Siemens NX <i
+                            class="fa fa-angle-right"></i> NX</p>
                     <h3 class="text-uq">EAIT Lab computer [on campus]</h3>
-                    <p>Follw the steps to <a href="https://login.vdi.uq.edu.au/" target="_blank" title="Launch UQ Digital Workspace Portal" rel="noopener">launch UQ Digital Workspace portal</a>.</p>
-                    <p>Once you have logged into Digital Workspace, open the EAIT-GPU-Desktop to run a virtual desktop session and access NX
-                    under:</p>
-                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> Siemens NX <i class="fa fa-angle-right"></i> NX</p>
-                    </div>
-                    <hr />
-                    <h2 class="text-uq text-center" id="nxDataManagement">Data Management</h2>
-                    <h3 class="text-uq">Create a New Part</h3>
-                    <div id="nxCreateNewPart">
+                    <p>Follw the steps to <a href="https://login.vdi.uq.edu.au/" target="_blank"
+                            title="Launch UQ Digital Workspace Portal" rel="noopener">launch UQ Digital Workspace
+                            portal</a>.</p>
+                    <p>Once you have logged into Digital Workspace, open the EAIT-GPU-Desktop to run a virtual desktop
+                        session and access NX
+                        under:</p>
+                    <p>Windows Key (Start) <i class="fa fa-angle-right"></i> Siemens NX <i
+                            class="fa fa-angle-right"></i> NX</p>
+                </div>
+                <hr />
+                <h2 class="text-uq text-center" id="nxDataManagement">Data Management</h2>
+                <h3 class="text-uq">Create a New Part</h3>
+                <div id="nxCreateNewPart">
                     <div class="row">
                         <div class="col-md">
                             <p>Use one of the following 4 methods to begin creating a new part:</p>
                             <ol>
-                                <li>Go to Home Tab <i class="fa fa-angle-right"></i> Ribbon Bar (Standard Group) <i class="fa fa-angle-right"></i> New OR</li>
-                                <li>File <i class="fa fa-angle-right"></i> New (Drop down menu top left of screen) OR</li>
-                                <li>Menu <i class="fa fa-angle-right"></i> File <i class="fa fa-angle-right"></i> New OR</li>
+                                <li>Go to Home Tab <i class="fa fa-angle-right"></i> Ribbon Bar (Standard Group) <i
+                                        class="fa fa-angle-right"></i> New OR</li>
+                                <li>File <i class="fa fa-angle-right"></i> New (Drop down menu top left of screen) OR
+                                </li>
+                                <li>Menu <i class="fa fa-angle-right"></i> File <i class="fa fa-angle-right"></i> New OR
+                                </li>
                                 <li>New (Quick access toolbar)</li>
                             </ol>
                         </div>
                         <div class="col-md">
                             <figure class="text-center">
-                            <img src="img/NX - Create a new part.png" class="img-fluid img-thumbnail" alt="Create a new part step 1">
-                            <figcaption>NX Ribbon - Create a new part, step 1</figcaption>
+                                <img src="img/NX - Create a new part.png" class="img-fluid img-thumbnail"
+                                    alt="Create a new part step 1">
+                                <figcaption>NX Ribbon - Create a new part, step 1</figcaption>
                             </figure>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md my-auto">
-                            <p>This will open a new session, asking for the part type, name, and location of the new file to be created. NX uses template files that are preconfigured for the purpose of the new part, i.e. modelling, drawing, assembly, sheet metal etc.</p>
-                            <p>Such things as part units, display preference, toolbars, colours, layer setup, construction geometry and coordinate systems are saved in the template part files and forms, and serve to preconfigure the new part.</p>
-                            <p>Existing template files can be customised to suit site requirements or new ones added. But for now, all that is required is to use the standard templates, specifying a name for the new file, a location to save, units and the type of part required.</p>
+                            <p>This will open a new session, asking for the part type, name, and location of the new
+                                file to be created. NX uses template files that are preconfigured for the purpose of the
+                                new part, i.e. modelling, drawing, assembly, sheet metal etc.</p>
+                            <p>Such things as part units, display preference, toolbars, colours, layer setup,
+                                construction geometry and coordinate systems are saved in the template part files and
+                                forms, and serve to preconfigure the new part.</p>
+                            <p>Existing template files can be customised to suit site requirements or new ones added.
+                                But for now, all that is required is to use the standard templates, specifying a name
+                                for the new file, a location to save, units and the type of part required.</p>
                         </div>
                         <div class="col-md mx-auto">
                             <figure class="text-center">
-                                <img src="img/NX - Create a new part 2.png" class="img-fluid img-thumbnail" alt="Create a new part step 2">
+                                <img src="img/NX - Create a new part 2.png" class="img-fluid img-thumbnail"
+                                    alt="Create a new part step 2">
                                 <figcaption>NX - Create a new part, step 2</figcaption>
                             </figure>
                         </div>
                     </div>
-                    </div>
-                    <h3 class="text-uq">Open an Existing Part</h3>
-                    <div id="nxOpenExistingPart">
+                </div>
+                <h3 class="text-uq">Open an Existing Part</h3>
+                <div id="nxOpenExistingPart">
                     <div class="row">
                         <div class="col-md">
                             <p>Use one of the following 4 methods to open an existing part:</p>
                             <ol>
                                 <li>Go to Home Tab <i class="fa fa-angle-right"></i> Ribbon Bar (Standard Group) <i
                                         class="fa fa-angle-right"></i> Open OR</li>
-                                <li>File <i class="fa fa-angle-right"></i> Open (Drop down menu top left of screen) OR</li>
-                                <li>Menu <i class="fa fa-angle-right"></i> File <i class="fa fa-angle-right"></i> Open OR</li>
+                                <li>File <i class="fa fa-angle-right"></i> Open (Drop down menu top left of screen) OR
+                                </li>
+                                <li>Menu <i class="fa fa-angle-right"></i> File <i class="fa fa-angle-right"></i> Open
+                                    OR</li>
                                 <li>Open (Quick access toolbar) OR</li>
                                 <li>History Palette</li>
                             </ol>
                         </div>
                         <div class="col-md mx-auto">
                             <figure class="text-center">
-                                <img src="img/NX - Open existing part.png" class="img-fluid img-thumbnail" alt="Create a new part step 2">
+                                <img src="img/NX - Open existing part.png" class="img-fluid img-thumbnail"
+                                    alt="Create a new part step 2">
                                 <figcaption>NX - Open an existing part</figcaption>
                             </figure>
                         </div>
@@ -192,15 +249,21 @@
                 <div id="nxSavePart">
                     <div class="row">
                         <div class="col-md">
-                            <p>NX doesn’t automatically save part file, so it is imperative that you save your work frequently. If for some reasons,
-                                NX shuts down all work in the current session will be lost, the saved part files are protected from data corruption
+                            <p>NX doesn’t automatically save part file, so it is imperative that you save your work
+                                frequently. If for some reasons,
+                                NX shuts down all work in the current session will be lost, the saved part files are
+                                protected from data corruption
                                 due to system crash but work between saves is not protected.</p>
                             <p>There are <strong>5 save options</strong>:</p>
                             <ol>
-                                <li><strong>Save</strong>: This option will save the work part (on screen) and any modified components.</li>
-                                <li><strong>Save Work Part Only</strong>: This option will only save the active part on the screen.</li>
-                                <li><strong>Save As</strong>: This option allows you to save the part on screen using a different name and/or type.
-                                    <strong>The default type is .prt</strong>. However, you can save your file as:<div class="row">
+                                <li><strong>Save</strong>: This option will save the work part (on screen) and any
+                                    modified components.</li>
+                                <li><strong>Save Work Part Only</strong>: This option will only save the active part on
+                                    the screen.</li>
+                                <li><strong>Save As</strong>: This option allows you to save the part on screen using a
+                                    different name and/or type.
+                                    <strong>The default type is .prt</strong>. However, you can save your file as:<div
+                                        class="row">
                                         <div class="col-md">
                                             <ul>
                                                 <li>IGES (.igs)</li>
@@ -224,22 +287,26 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><strong>Save All</strong>: This option will save all the opened and modified part files.</li>
-                                <li><strong>Save Bookmark</strong>: This option will save a screenshot and context of the present model on the
+                                <li><strong>Save All</strong>: This option will save all the opened and modified part
+                                    files.</li>
+                                <li><strong>Save Bookmark</strong>: This option will save a screenshot and context of
+                                    the present model on the
                                     screen as a .JPEG file and bookmarks.</li>
                             </ol>
                         </div>
                         <div class="col-md">
                             <figure class="text-center">
-                            <img class="img-fluid d-block w-75 mx-auto" src="img/NX - Saving parts.png" alt="Save a part in NX" />
-                            <figcapion>NX - Save a part</figcapion>
+                                <img class="img-fluid d-block w-75 mx-auto" src="img/NX - Saving parts.png"
+                                    alt="Save a part in NX" />
+                                <figcapion>NX - Save a part</figcapion>
                             </figure>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
                 <h3 class="text-uq">Closing and Exiting</h3>
                 <div id="nxCloseExit">
-                    <p>Various options are available for closing parts with or without saving. On file exit NX checks if any parts have been modified in session but not saved and alerts user.</p>
+                    <p>Various options are available for closing parts with or without saving. On file exit NX checks if
+                        any parts have been modified in session but not saved and alerts user.</p>
                 </div>
                 <hr />
                 <h2 class="text-uq text-center">Mouse Buttons in NX</h2>
@@ -249,19 +316,22 @@
                         <div class="col-md">
                             <ul>
                                 <li>The left mouse button is referred to as MB1</li>
-                                <li>It is used for Selection of icons, menus, and other entities on the graphic screen.</li>
+                                <li>It is used for Selection of icons, menus, and other entities on the graphic screen.
+                                </li>
                                 <li>Double clicking MB1 on any feature will automatically open the Edit Dialog box.</li>
-                                <li>Hovering over object and then clicking MB1 provides user quick access toolbar, as shown in the image picture
+                                <li>Hovering over object and then clicking MB1 provides user quick access toolbar, as
+                                    shown in the image picture
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md">
                             <figure class="text-center">
-                                <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 1 Demo.png" alt="Mouse button 1" />
+                                <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 1 Demo.png"
+                                    alt="Mouse button 1" />
                                 <figcaption>NX - Mouse Button 1</figcaption>
                             </figure>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <h3 class="text-uq">MB2 - Mouse Button 2</h3>
                 <div id="nxMouseBtn2">
@@ -271,12 +341,14 @@
                                 <li>The middle mouse button or the scroll button is referred to as MB2.</li>
                                 <li>MB2 is used to Rotate the object by pressing, holding, and dragging.</li>
                                 <li>If it is a scroll button, the object can be zoomed in and out by scrolling.</li>
-                                <li>Clicking the MB2 will also execute the OK command if any pop-up window or dialog box is open.</li>
+                                <li>Clicking the MB2 will also execute the OK command if any pop-up window or dialog box
+                                    is open.</li>
                             </ul>
                         </div>
                         <div class="col-md">
                             <figure class="text-center">
-                                <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 2 diagram.png" alt="Mouse Button 2" />
+                                <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 2 diagram.png"
+                                    alt="Mouse Button 2" />
                                 <figcaption>NX - Mouse Button 2</figcaption>
                             </figure>
                         </div>
@@ -289,8 +361,9 @@
                             <ul>
                                 <li>The right mouse button is referred to as MB3</li>
                                 <li>MB3 used to access the user interface pop-up menus.</li>
-                                <li>You can access the subsequent options that pop up depending on the selection mode and Application.</li>
-                            </ul>                           
+                                <li>You can access the subsequent options that pop up depending on the selection mode
+                                    and Application.</li>
+                            </ul>
                         </div>
                         <div class="col-md">
                             <figure class="text-center">
@@ -307,11 +380,13 @@
                             <h4 class="text-uq">Zoom In/Out</h4>
                             <ul>
                                 <li>Press and hold both MB1 and MB2 simultaneously and drag (or use wheel) OR</li>
-                                <li>Press and hold <span class="badge text-bg-secondary h6 border border-dark">Ctrl</span> button on the keyboard and then press and drag the MB2</li>
+                                <li>Press and hold <span
+                                        class="badge text-bg-secondary h6 border border-dark">Ctrl</span> button on the
+                                    keyboard and then press and drag the MB2</li>
                             </ul>
                         </div>
                         <div class="col-md">
-                             <figure class="text-center">
+                            <figure class="text-center">
                                 <img class="img-fluid img-thumbnail" src="img/Zoom.png" alt="Zoom in NX" />
                                 <figcaption></figcaption>
                             </figure>
@@ -322,7 +397,9 @@
                             <h4 class="text-uq">Pan</h4>
                             <ul>
                                 <li>Press and hold both the MB2 and MB3 simultaneously and drag OR</li>
-                                <li>Press and hold <span class="badge text-bg-secondary h6 border border-dark">Shift</span> button on the keyboard and press and drag the MB2</li>
+                                <li>Press and hold <span
+                                        class="badge text-bg-secondary h6 border border-dark">Shift</span> button on the
+                                    keyboard and press and drag the MB2</li>
                             </ul>
                         </div>
                         <div class="col-md">
@@ -333,105 +410,474 @@
                         </div>
                     </div>
                 </div>
+                <hr />
                 <h2 class="text-uq text-center">User Interface</h2>
-                    <h3 class="text-uq">Siemens NX Curriculum - User Interface</h3>
-                    <div id="nxUserInterface">
+                <h3 class="text-uq">Welcome Screen</h3>
+                <div id="nxUserInterface">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>The NX User Interface is explained in the video below [15min] and the subsequent sections.</p>
-                            <p>After starting NX the main screen shows the Discovery Centre Tab [also known as Welcome Page] which contains the
+                            <p>The NX User Interface is explained in the video below [15min] and the subsequent
+                                sections.</p>
+                            <p>After starting NX the main screen shows the Discovery Centre Tab [also known as Welcome
+                                Page] which contains the
                                 following:</p>
                             <ul>
-                                <li><strong>Discovery NX [Highlights]:</strong> Features and highlights NX functionality.</li>
+                                <li><strong>Discovery NX [Highlights]:</strong> Features and highlights NX
+                                    functionality.</li>
                                 <li><strong>What’s New:</strong> Information on software enhancements.</li>
                                 <li><strong>Start here - Design:</strong> NX Design quick course. Guided exercises.</li>
-                                <li><strong>Start here - Manufacturing:</strong> NX Manufacturing quick course. Guided exercises.</li>
-                                <li><strong>First Tips</strong> - Overview of the screen layout, and basic commands.</li>
+                                <li><strong>Start here - Manufacturing:</strong> NX Manufacturing quick course. Guided
+                                    exercises.</li>
+                                <li><strong>First Tips</strong> - Overview of the screen layout, and basic commands.
+                                </li>
                             </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <figure class="text-center">
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
                                 <img class="img-fluid" src="img/Welcome Screen.png" alt="Welcome Screen" />
                                 <figcaption>NX - Welcome Screen (Click to enlarge)</figcaption>
-                                </figure>
+                            </figure>
+                        </div>
+                        <div class="col-md">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/PLGNBwZcts0?si=IpDuVH4DyIeG31Q1"
+                                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                             </div>
-                            <div class="col-md">
-                                <div class="ratio ratio-16x9">
-                                <iframe src="https://www.youtube.com/embed/PLGNBwZcts0?si=IpDuVH4DyIeG31Q1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            <p class="text-center">Video - Siemens NX Curriculum - User Interface (14:48)</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-uq">Interface Layout</h3>
+                <div id="nxInterfaceLayout">
+                    <p>The important sections of the layout are shown below. Click the white plus symbols - <i
+                            class="fa fa-circle-plus text-uq fa-2x"></i> - to reveal more information about that part of
+                        the interface layout.</p>
+                    <div class="d-block w-50 mx-auto">
+                        <iframe src="https://uq.h5p.com/content/1292212025209719219/embed"
+                            aria-label="NX - Interface Layout" width="1088" height="637" frameborder="0"
+                            allowfullscreen="allowfullscreen"
+                            allow="autoplay *; geolocation *; microphone *;  camera *; midi *; encrypted-media *"></iframe>
+                    </div>
+                    <script src="https://uq.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+                </div>
+                <h3 class="text-uq">Resource Bar</h3>
+                <div id="nxResourceBar">
+                    <p>On the left of the NX interface is the Resource Bar which consist of multiple tabs. Assembly,
+                        Constraints and Part Navigator windows together with simulation and manufacturing wizards, Reuse
+                        Library, History Palette, Roles etc are accessed from the Resource Bar. Some of these are
+                        explained in more detail below.</p>
+                    <div class="accordion" id="nxResourceBarAcc">
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Part Navigator
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#nxResourceBarAcc">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img class="img-fluid d-block mx-auto" src="img/Part Navigator Menu.png"
+                                                    alt="Part Navigator Menu" />
+                                                <figcaption class="text-center">NX - Part Navigator Menu</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="col-md">
+                                            <img class="img-fluid d-block mx-auto" src="img/Part Navigator Icon.png"
+                                                alt="Part Navigator Icon" />
+                                            <h4 class="text-uq">Part feature history.</h4>
+                                            <ul>
+                                                <li>Right mouse button click (MB3) over a feature provides access to
+                                                    feature editing commands.</li>
+                                                <li>Child features of selected feature are shown in light blue.</li>
+                                                <li>Parent feature are shown in magenta colour.</li>
+                                            </ul>
+                                            <p>In the example shown, the selected feature is Extrude (4), which has:</p>
+                                            <ul>
+                                                <li>Child features of Sketch (5), Extrude (14) etc.</li>
+                                                <li>and Parent features Extrude (2) & Sketch (3).</li>
+                                            </ul>
+                                            <div class="alert alert-info border border-info border-3 rounded">
+                                                <h4 class="text-center"><i class="fa fa-circle-info"></i> Important Note
+                                                </h4>
+                                                <p>Features can be edited, suppressed, reordered, copied, replaced etc.
+                                                    The Part Navigator is available in all NX Applications, but feature
+                                                    editing operations are only available in the Modelling environment.
+                                                </p>
+                                            </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    History Palette
+                                </button>
+                            </div>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#nxResourceBarAcc">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <figure>
+                                                <img class="img-fluid d-block mx-auto"
+                                                    src="img/History Palette Menu.jpg" alt="History Palette Menu" />
+                                                <figcaption class="text-center">NX - History Palette Menu</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="col-md">
+                                            <img class="img-fluid d-block mx-auto" src="img/History Palette Icon.png"
+                                                alt="History Palette Icon" />
+                                            <h4 class="text-uq">History Palette</h4>
+                                            <p>Provides quick access to recently opened files or other palette entries.
+                                                The History Palette remembers the last palette options that were used
+                                                and the state of the session when it was closed. Double click to re-open
+                                                part.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more accordion items as needed -->
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Roles Menu
+                                </button>
+                            </div>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#nxResourceBarAcc">
+                                <div class="accordion-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <figure>
+                                                <img class="img-fluid d-block mx-auto" src="img/Roles Menu.png"
+                                                    alt="Roles Menu" />
+                                                <figcaption class="text-center">NX - Roles Menu</figcaption>
+                                            </figure>
+                                        </div>
+                                        <div class="col-md">
+                                            <h4 class="text-uq">Roles</h4>
+                                            <p>Used to customise the interface, by allowing users to alter what commands
+                                                and function are included in the toolbar menus.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <h3 class="text-uq mt-2">View Commands</h3>
+                <div class="nxViewCommands">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Clicking MB3 in the Graphics Window displays pop-up menu allowing access to view commands
+                                such as Fit, Refresh, change render style [shaded, photorealistic, wireframe.], standard
+                                view orientations and more.</p>
+                        </div>
+                        <div class="col-md">
+                            <figure>
+                                <img class="img-fluid " src="img/View Commands Example.png" alt="View Commands" />
+                                <figcaption class="text-center">NX - View Commands Example</figcaption>
+                            </figure>
+                        </div>
                     </div>
-                    <h3 class="text-uq">Interface Layout</h3>
-                    <div id="nxInterfaceLayout">
-                    <p>The important sections of the layout are shown below.</p>
-                    <!--MAKE THIS INTO A H5P-->
-                    <figure class="text-center d-block w-50 mx-auto">
-                        <img class="img-fluid" src="img/NX Layout Overview.png" alt="NX Layout Overview" />
-                        <figcaption>NX - Layout Overview (Click to enlarge)</figcaption>
+                </div>
+                <h3 class="text-uq mt-2">View Triad</h3>
+                <div class="nxViewTriad">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Bottom left of Graphics Window, selecting a face on the view triad reorients the view,
+                                and selecting any of the axis
+                                [red, green, blue] lock view rotations around that axis.</p>
+                        </div>
+                        <div class="col-md">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Triad Example.png" alt="View Triad Example" />
+                                <figcaption>NX - View Triad Example</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h2 class="text-uq text-center">Geometry Selection</h2>
+                <div class="nxGeometrySelection">
+                    <p>When moving the mouse over geometry in the graphics window, geometry is highlighted for
+                        selection.</p>
+                    <figure class="text-center">
+                        <img class="img-fluid d-block w-50 mx-auto" src="img/Geometry Selection Example.png"
+                            alt="Geometry Selection Example" />
+                        <figcaption>NX - Geometry Selection Example</figcaption>
                     </figure>
                 </div>
-        </div>
-                <!-- Tab page - Headings -->
-                <!-- NX Sketching -->
-                <div class="tab-pane fade" id="nxSketching" role="tabpanel">
-                    <h1 class="text-uq text-center">Sketching</h1>
+                <h3 class="text-uq">MB1 – Left Mouse Button</h3>
+                <div class="nxGeometrySelectionMB1">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Single click MB1 on highlighted object provides for quick access to feature options such
+                                as edit, hide, or delete.
+                                Double click MB1 on feature opens feature edit dialog box.</p>
+                        </div>
+                        <div class="col-md">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Geometry Selection MB1.png"
+                                    alt="Geometry Selection MB1 Example" />
+                                <figcaption>NX - Geometry Selection MB1 Example</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-                <!-- NX 3D Modelling -->
-                <div class="tab-pane fade" id="nx3DModelling" role="tabpanel">
-                    <h1 class="text-uq text-center">3D Modelling</h1>
-                </div>
-                <!-- NX Assembly Modelling -->
-                <div class="tab-pane fade" id="nxAssemblyModelling" role="tabpanel">
-                    <h1 class="text-uq text-center">Assembly Modelling</h1>
-                </div>
-                <!-- NX 2D Drawings -->
-                <div class="tab-pane fade" id="nx2DDrawings" role="tabpanel">
-                    <h1 class="text-uq text-center">2D Drawing</h1>
-                </div>
-                <!-- About Section -->
-                <div class="tab-pane fade" id="uqSiemensHistory" role="tabpanel">
-                    <h1 class="text-uq text-center">UQ/Siemens History</h1>
-                    <p>UQ, Siemens and the Australian Government have been working to build closer collaboration between Australia and Germany to prepare for Industry 4.0 - the fourth industrial revolution. To read more about the partnership you can visit the links below.</p>
-                    <ul>
-                        <li><a href="https://www.uq.edu.au/news/article/2018/11/500m-plus-software-grant-equip-students-digital-revolution" title="Siemens Software Grant to UQ Article" target="_blank" rel="noopener">$500m-plus software grant to equip students for digital revolution - Nov 2018</a></li>
-                        <li><a href="https://resources.sw.siemens.com/en-US/case-study-university-of-queensland" title="Preparing the workforce of the future - Siemens Blog" target="_blank" rel="noopener">Preparing the workforce of the future with Siemens solutions - The UQ Case Study</a></li>
-                        <li><a href="https://blogs.sw.siemens.com/academic/siemens-software-bridges-the-gap-between-industry-and-academia-at-the-university-of-queensland/" title="Siemens bridging the gap between industry and academic - Siemens Blog" target="_blank" rel="noopener">Siemens Software Bridges the Gap Between Industry and Academia at the University of Queensland - Jun 2021</a></li>
-                    </ul>
-                </div>
+                <h3 class="text-uq">Pop-Up Menus</h3>
+                    <div id="nxPopUpMenus">
+                        <p><strong>Pop-up</strong> menus are accessed by clicking MB3, the functions presented are
+                            dependent on selection mode and current application.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Popup Menu Sketch Application.png"
+                                        alt="Popup Menu Sketch Application" />
+                                    <figcaption>NX - Popup Menu Sketch Application</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md my-auto">
+                                <p>Single click MB3 in the graphics window whilst in the Sketch Application brings up
+                                    the pop-up menu shown to the left. Quick access to selection tools and views are
+                                    available.</p>
+                            </div>
+                        </div>
+                        <p>Whereas at other times the following pop-up menus are displayed:</p>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Popup Menu View Commands.png"
+                                        alt="Popup Menu - View Commands" />
+                                    <figcaption>NX - Popup Menu - View Commands</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-3">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Popup Menu Feature Commands.png"
+                                        alt="Popup Menu - Feature Commands" />
+                                    <figcaption>NX - Popup Menu - Feature Commands</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md my-auto">
+                                <p>Click and hold MB3 in graphics windows displays either view commands or if done near a feature will show feature commands.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-uq">Quick Pick</h3>
+                    <div id="nxQuickPick">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Quick Pick Menu 1.png" alt="Quick Pick Menu 1" />
+                                    <figcaption>NX - Quick Pick Menu Fig. 1</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md my-auto">
+                                <p>To select an entity, move mouse over the entity of interest until it is highlighted with a magenta colour and click the left mouse button to select the geometric entity, feature, or component. If the entity is hidden behind the displayed geometry, position the mouse cursor close to that area on the screen, after a couple of seconds, the ball cursor turns into a plus symbol <i class="fa fa-plus"></i> as shown in the image. Click the left mouse button (MB1) to get Quick Pick dialog box as shown in the following figure below.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Quick Pick Menu 2.png" alt="Quick Pick Menu 2" />
+                                    <figcaption>NX - Quick Pick Menu Fig. 2</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md my-auto">
+                                <p>From the Quick Pick dialog box one can cycle through geometry on the screen to select the item of interest. It’s a fast way to select internal geometry or geometry that is hidden.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                        <h2 class="text-uq text-center">Absolute Coordinate System</h2>
+                        <div id="nxAbsoluteCoordinateSystem">
+                            <div class="row">
+                                <div class="col-md">
+                                    <p>Absolute Coordinate System: All objects are referenced from the absolute coordinate system. This is a fixed coordinate system and the locations and orientations of every object in NX modelling space are related back to this system.</p>
+                                </div>
+                                <div class="col-md">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/KkQodgdtXic?si=Mu_ep-eMUNd4FH_L" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="text-center">Video - Siemens NX Curriculum - Absolute Coordinate System (3:10)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <h2 class="text-uq text-center">Work Coordinate System</h2>
+                        <div id="nxWorkCoordinateSystem">
+                            <p>The Work Coordinate System is what you will use for construction when you want to determine orientations and angles of features. The axes of the WCS are denoted:</p>
+                                <ul>
+                                    <li>XC</li>
+                                    <li>YC</li>
+                                    <li>ZC</li>
+                                </ul>
+                                <p>The C stands for current. It is possible to have multiple coordinate systems in a part file, <strong>but only one of them can be the work coordinate system</strong>.</p>
+                        </div>
+                        <h2 class="text-uq text-center">Further Reading - Optional</h2>
+                        <h3 class="text-uq">User Preferences</h3>
+                        <div id="nxUserPreferences">
+                            <p>Used for defining display parameter of new objects, name, layouts, and view. You can also set custom layer, colour, font and line widths for created objects and much more. User preference settings override customer defaults [site configuration] settings for the same functions.</p>
+                            <p>Command location:</p>
+                            <p>File <i class="fa fa-angle-right"></i> Preferences</p>
+                            <figure class="text-center d-block mx-auto" style="width: 30%">
+                                <img class="img-fluid" src="img/User Preferences.png" alt="NX - User Preferences" />
+                                <figcaption>NX - User Preferences</figcaption>
+                            </figure>
+                        </div>
+                        <h3 class="text-uq">Layers</h3>
+                        <div id="nxLayers">
+                            <div class="row">
+                                <div class="col-md">
+                                    <p>Layers are used to store objects in a file, and work like containers to collect the objects in a structured and consistent manner. Unlike simple visual tools like Show and Hide, Layers provide a permanent way to organize and manage the visibility and select-ability of objects in your file.
+                                    A Layer is a system-defined attribute such as colour, font, and width that all objects in NX must have. There are 256 usable layers in NX, one of which is always the Work Layer.  Any of the 256 layers can be assigned to one of four classifications of status.</p>
+                                    <ul>
+                                        <li>Work</li>
+                                        <li>Selectable</li>
+                                        <li>Visible Only</li>
+                                        <li>Invisible</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="https://www.youtube.com/embed/_mTBmRIvdd4?si=dLMskzAoz3ZBtkU0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="text-center">Video - Siemens NX Curriculum – Layer Control (6:41)</p>
+                                </div>
+                            </div>
+                            </div>
+                            <h3 class="text-uq">Work With Multiple Open Parts</h3>
+                            <div id="nxMultipleOpenParts">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>Not only can you have multiple parts opened in NX and work on them individually, but you can also  simultaneously view multiple parts. This is achieved by clicking:</p>
+                                        <ol>
+                                            <li>Window Layout on the Quick Access Toolbar at the top of screen and</li>
+                                            <li>Choosing your preferred layout or dragging a selected display part tab to the centre of the NX session, as demonstrated in the this video.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <figure class="text-center">
+                                            <img class="img-fluid" src="img/Mulitple Open Parts Example.png" alt="Multiple Open Parts" />
+                                            <figcaption>NX - Multiple Open Parts</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/QrJB5qrFJsg?si=xnTddu21KV-Sk-N_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <p class="text-center">Siemens NX Curriculum - Multi Window Display (3:52)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="text-uq">Move The Work Coordinate System</h3>
+                            <div id="nxMoveWorkCoordinateSystem">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <p>To move a component in relation to an existing Work Coordinate System, you can follow these steps:</p>
+                                        <ol>
+                                            <li>Hover the cursor over the component to reposition, then <strong>click MB3 <i class="fa fa-angle-right"></i> Move</strong>. The Dynamic WCS will display in the work area and the Move Component dialog will display.</li>
+                                            <li>On the Move Component dialog, set <strong>Motion = Dynamic</strong>.</li>
+                                            <li>In the work area hover the cursor over the cone shape at the end of the X, Y, or Z axis on the Dynamic WCS.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/LDYA0znwp74?si=Lvf1vyRaWpjp3vI5" title="YouTube video player"
+                                                frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <p class="text-center">Siemens NX Curriculum – Moving the Work Coordinate System (5:10)</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+            <!-- Tab page - Headings -->
+            <!-- NX Sketching -->
+            <div class="tab-pane fade" id="nxSketching" role="tabpanel">
+                <h1 class="text-uq text-center">Sketching</h1>
             </div>
-            <div class="fixedGapDivBottom"></div>
-            <footer class="text-bg-uq p-2 fixed-bottom text-center">
-                <img alt="UQ Logo" class="img-fluid p-2 float-start" width="170px" src="https://uqeait.github.io/learnuq/uq-logo--reversed.svg">
-                <p>© The University of Queensland ABN: 63 942 912 684
-                    <abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS:</abbr>
-                    <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/cricos-link" title="UQ Cricos link" target="_blank" rel="noopener">00025B</a>
-                    <abbr title="Tertiary Education Quality and Standards Agency">TEQSA:</abbr>
-                    <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/teqsa-link" title="UQ TEQSA Link" target="_blank" rel="noopener">PRV12080</a>
-                </p>
-            </footer>
-            <button id="bttBtn" data-toggle="tooltip" data-placement="top" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-            <script>
-                const images = document.querySelectorAll('img'); // Select all images
-                const imageModal = document.getElementById('imageModal');
-                const modalImage = imageModal.querySelector('img');
+            <!-- NX 3D Modelling -->
+            <div class="tab-pane fade" id="nx3DModelling" role="tabpanel">
+                <h1 class="text-uq text-center">3D Modelling</h1>
+            </div>
+            <!-- NX Assembly Modelling -->
+            <div class="tab-pane fade" id="nxAssemblyModelling" role="tabpanel">
+                <h1 class="text-uq text-center">Assembly Modelling</h1>
+            </div>
+            <!-- NX 2D Drawings -->
+            <div class="tab-pane fade" id="nx2DDrawings" role="tabpanel">
+                <h1 class="text-uq text-center">2D Drawing</h1>
+            </div>
+            <!-- About Section -->
+            <div class="tab-pane fade" id="uqSiemensHistory" role="tabpanel">
+                <h1 class="text-uq text-center">UQ/Siemens History</h1>
+                <p>UQ, Siemens and the Australian Government have been working to build closer collaboration between
+                    Australia and Germany to prepare for Industry 4.0 - the fourth industrial revolution. To read more
+                    about the partnership you can visit the links below.</p>
+                <ul>
+                    <li><a href="https://www.uq.edu.au/news/article/2018/11/500m-plus-software-grant-equip-students-digital-revolution"
+                            title="Siemens Software Grant to UQ Article" target="_blank" rel="noopener">$500m-plus
+                            software grant to equip students for digital revolution - Nov 2018</a></li>
+                    <li><a href="https://resources.sw.siemens.com/en-US/case-study-university-of-queensland"
+                            title="Preparing the workforce of the future - Siemens Blog" target="_blank"
+                            rel="noopener">Preparing the workforce of the future with Siemens solutions - The UQ Case
+                            Study</a></li>
+                    <li><a href="https://blogs.sw.siemens.com/academic/siemens-software-bridges-the-gap-between-industry-and-academia-at-the-university-of-queensland/"
+                            title="Siemens bridging the gap between industry and academic - Siemens Blog"
+                            target="_blank" rel="noopener">Siemens Software Bridges the Gap Between Industry and
+                            Academia at the University of Queensland - Jun 2021</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fixedGapDivBottom"></div>
+        <footer class="text-bg-uq p-2 fixed-bottom text-center">
+            <img alt="UQ Logo" class="img-fluid p-2 float-start" width="170px"
+                src="https://uqeait.github.io/learnuq/uq-logo--reversed.svg">
+            <p>© The University of Queensland ABN: 63 942 912 684
+                <abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">CRICOS:</abbr>
+                <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/cricos-link"
+                    title="UQ Cricos link" target="_blank" rel="noopener">00025B</a>
+                <abbr title="Tertiary Education Quality and Standards Agency">TEQSA:</abbr>
+                <a class="text-white text-decoration-none" href="https://www.uq.edu.au/about/teqsa-link"
+                    title="UQ TEQSA Link" target="_blank" rel="noopener">PRV12080</a>
+            </p>
+        </footer>
+        <button id="bttBtn" data-toggle="tooltip" data-placement="top" title="Back to top"><i
+                class="fa-solid fa-arrow-up"></i></button>
+        <script>
+            const images = document.querySelectorAll('img'); // Select all images
+            const imageModal = document.getElementById('imageModal');
+            const modalImage = imageModal.querySelector('img');
 
-                images.forEach(image => {
-                    image.addEventListener('click', () => {
-                        modalImage.src = image.src;
-                        modalImage.alt = image.alt; // Set alt text
-                        const myModal = new bootstrap.Modal(imageModal);
-                        myModal.show();
-                    });
+            images.forEach(image => {
+                image.addEventListener('click', () => {
+                    modalImage.src = image.src;
+                    modalImage.alt = image.alt; // Set alt text
+                    const myModal = new bootstrap.Modal(imageModal);
+                    myModal.show();
                 });
-            </script>
-            <script>
-                const closeButton = document.querySelector('.close-modal');
+            });
+        </script>
+        <script>
+            const closeButton = document.querySelector('.close-modal');
 
-                closeButton.addEventListener('click', () => {
-                    const myModal = bootstrap.Modal.getInstance(imageModal) // Get the modal instance
-                    myModal.hide(); // Use the Bootstrap method to hide the modal
-                });
-            </script>
-        </body>
-    </html>
+            closeButton.addEventListener('click', () => {
+                const myModal = bootstrap.Modal.getInstance(imageModal) // Get the modal instance
+                myModal.hide(); // Use the Bootstrap method to hide the modal
+            });
+        </script>
+</body>
+
+</html>
