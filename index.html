@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -9,7 +10,9 @@
     <!-- Google fonts to match UQ Extend look and feel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8PW4WD9CT"></script>
     <script>
@@ -18,7 +21,7 @@
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'G-H8PW4WD9CT');
-             document.getElementById('uqnxManualsSearchResults').addEventListener('click', (event) => {
+            document.getElementById('uqnxManualsSearchResults').addEventListener('click', (event) => {
                 const clickedElement = event.target;
                 const accordionButton = clickedElement.closest('.accordion-button');
 
@@ -589,7 +592,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Add more accordion items as needed -->
                         </div>
                         <div class="accordion-item">
                             <div class="accordion-header" id="headingThree">
@@ -681,177 +683,536 @@
                     </div>
                 </div>
                 <h3 class="text-uq">Pop-Up Menus</h3>
-                    <div id="nxPopUpMenus">
-                        <p><strong>Pop-up</strong> menus are accessed by clicking MB3, the functions presented are
-                            dependent on selection mode and current application.</p>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <figure class="text-center">
-                                    <img class="img-fluid" src="img/Popup Menu Sketch Application.png"
-                                        alt="Popup Menu Sketch Application" />
-                                    <figcaption>NX - Popup Menu Sketch Application</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-md my-auto">
-                                <p>Single click MB3 in the graphics window whilst in the Sketch Application brings up
-                                    the pop-up menu shown to the left. Quick access to selection tools and views are
-                                    available.</p>
-                            </div>
-                        </div>
-                        <p>Whereas at other times the following pop-up menus are displayed:</p>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <figure class="text-center">
-                                    <img class="img-fluid" src="img/Popup Menu View Commands.png"
-                                        alt="Popup Menu - View Commands" />
-                                    <figcaption>NX - Popup Menu - View Commands</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-md-3">
-                                <figure class="text-center">
-                                    <img class="img-fluid" src="img/Popup Menu Feature Commands.png"
-                                        alt="Popup Menu - Feature Commands" />
-                                    <figcaption>NX - Popup Menu - Feature Commands</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-md my-auto">
-                                <p>Click and hold MB3 in graphics windows displays either view commands or if done near a feature will show feature commands.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="text-uq">Quick Pick</h3>
-                    <div id="nxQuickPick">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <figure class="text-center">
-                                    <img class="img-fluid" src="img/Quick Pick Menu 1.png" alt="Quick Pick Menu 1" />
-                                    <figcaption>NX - Quick Pick Menu Fig. 1</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-md my-auto">
-                                <p>To select an entity, move mouse over the entity of interest until it is highlighted with a magenta colour and click the left mouse button to select the geometric entity, feature, or component. If the entity is hidden behind the displayed geometry, position the mouse cursor close to that area on the screen, after a couple of seconds, the ball cursor turns into a plus symbol <i class="fa fa-plus"></i> as shown in the image. Click the left mouse button (MB1) to get Quick Pick dialog box as shown in the following figure below.</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <figure class="text-center">
-                                    <img class="img-fluid" src="img/Quick Pick Menu 2.png" alt="Quick Pick Menu 2" />
-                                    <figcaption>NX - Quick Pick Menu Fig. 2</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-md my-auto">
-                                <p>From the Quick Pick dialog box one can cycle through geometry on the screen to select the item of interest. It’s a fast way to select internal geometry or geometry that is hidden.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                        <h2 class="text-uq text-center">Absolute Coordinate System</h2>
-                        <div id="nxAbsoluteCoordinateSystem">
-                            <div class="row">
-                                <div class="col-md">
-                                    <p>Absolute Coordinate System: All objects are referenced from the absolute coordinate system. This is a fixed coordinate system and the locations and orientations of every object in NX modelling space are related back to this system.</p>
-                                </div>
-                                <div class="col-md">
-                                    <div class="ratio ratio-16x9">
-                                        <iframe src="https://www.youtube.com/embed/KkQodgdtXic?si=Mu_ep-eMUNd4FH_L" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                    <p class="text-center">Video - Siemens NX Curriculum - Absolute Coordinate System (3:10)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <hr />
-                        <h2 class="text-uq text-center">Work Coordinate System</h2>
-                        <div id="nxWorkCoordinateSystem">
-                            <p>The Work Coordinate System is what you will use for construction when you want to determine orientations and angles of features. The axes of the WCS are denoted:</p>
-                                <ul>
-                                    <li>XC</li>
-                                    <li>YC</li>
-                                    <li>ZC</li>
-                                </ul>
-                                <p>The C stands for current. It is possible to have multiple coordinate systems in a part file, <strong>but only one of them can be the work coordinate system</strong>.</p>
-                        </div>
-                        <h2 class="text-uq text-center">Further Reading - Optional</h2>
-                        <h3 class="text-uq">User Preferences</h3>
-                        <div id="nxUserPreferences">
-                            <p>Used for defining display parameter of new objects, name, layouts, and view. You can also set custom layer, colour, font and line widths for created objects and much more. User preference settings override customer defaults [site configuration] settings for the same functions.</p>
-                            <p>Command location:</p>
-                            <p>File <i class="fa fa-angle-right"></i> Preferences</p>
-                            <figure class="text-center d-block mx-auto" style="width: 30%">
-                                <img class="img-fluid" src="img/User Preferences.png" alt="NX - User Preferences" />
-                                <figcaption>NX - User Preferences</figcaption>
+                <div id="nxPopUpMenus">
+                    <p><strong>Pop-up</strong> menus are accessed by clicking MB3, the functions presented are
+                        dependent on selection mode and current application.</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Popup Menu Sketch Application.png"
+                                    alt="Popup Menu Sketch Application" />
+                                <figcaption>NX - Popup Menu Sketch Application</figcaption>
                             </figure>
                         </div>
-                        <h3 class="text-uq">Layers</h3>
-                        <div id="nxLayers">
-                            <div class="row">
-                                <div class="col-md">
-                                    <p>Layers are used to store objects in a file, and work like containers to collect the objects in a structured and consistent manner. Unlike simple visual tools like Show and Hide, Layers provide a permanent way to organize and manage the visibility and select-ability of objects in your file.
-                                    A Layer is a system-defined attribute such as colour, font, and width that all objects in NX must have. There are 256 usable layers in NX, one of which is always the Work Layer.  Any of the 256 layers can be assigned to one of four classifications of status.</p>
-                                    <ul>
-                                        <li>Work</li>
-                                        <li>Selectable</li>
-                                        <li>Visible Only</li>
-                                        <li>Invisible</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md">
-                                    <div class="ratio ratio-16x9">
-                                        <iframe src="https://www.youtube.com/embed/_mTBmRIvdd4?si=dLMskzAoz3ZBtkU0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                    <p class="text-center">Video - Siemens NX Curriculum – Layer Control (6:41)</p>
-                                </div>
-                            </div>
-                            </div>
-                            <h3 class="text-uq">Work With Multiple Open Parts</h3>
-                            <div id="nxMultipleOpenParts">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <p>Not only can you have multiple parts opened in NX and work on them individually, but you can also  simultaneously view multiple parts. This is achieved by clicking:</p>
-                                        <ol>
-                                            <li>Window Layout on the Quick Access Toolbar at the top of screen and</li>
-                                            <li>Choosing your preferred layout or dragging a selected display part tab to the centre of the NX session, as demonstrated in the this video.</li>
-                                        </ol>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <figure class="text-center">
-                                            <img class="img-fluid" src="img/Mulitple Open Parts Example.png" alt="Multiple Open Parts" />
-                                            <figcaption>NX - Multiple Open Parts</figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/embed/QrJB5qrFJsg?si=xnTddu21KV-Sk-N_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <p class="text-center">Siemens NX Curriculum - Multi Window Display (3:52)</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-uq">Move The Work Coordinate System</h3>
-                            <div id="nxMoveWorkCoordinateSystem">
-                                <div class="row">
-                                    <div class="col-md">
-                                        <p>To move a component in relation to an existing Work Coordinate System, you can follow these steps:</p>
-                                        <ol>
-                                            <li>Hover the cursor over the component to reposition, then <strong>click MB3 <i class="fa fa-angle-right"></i> Move</strong>. The Dynamic WCS will display in the work area and the Move Component dialog will display.</li>
-                                            <li>On the Move Component dialog, set <strong>Motion = Dynamic</strong>.</li>
-                                            <li>In the work area hover the cursor over the cone shape at the end of the X, Y, or Z axis on the Dynamic WCS.</li>
-                                        </ol>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/embed/LDYA0znwp74?si=Lvf1vyRaWpjp3vI5" title="YouTube video player"
-                                                frameborder="0" allowfullscreen></iframe>
-                                        </div>
-                                        <p class="text-center">Siemens NX Curriculum – Moving the Work Coordinate System (5:10)</p>
-                                    </div>
-                                </div>
-                               
-                            </div>
+                        <div class="col-md my-auto">
+                            <p>Single click MB3 in the graphics window whilst in the Sketch Application brings up
+                                the pop-up menu shown to the left. Quick access to selection tools and views are
+                                available.</p>
                         </div>
+                    </div>
+                    <p>Whereas at other times the following pop-up menus are displayed:</p>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Popup Menu View Commands.png"
+                                    alt="Popup Menu - View Commands" />
+                                <figcaption>NX - Popup Menu - View Commands</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-3">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Popup Menu Feature Commands.png"
+                                    alt="Popup Menu - Feature Commands" />
+                                <figcaption>NX - Popup Menu - Feature Commands</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md my-auto">
+                            <p>Click and hold MB3 in graphics windows displays either view commands or if done near a
+                                feature will show feature commands.</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-uq">Quick Pick</h3>
+                <div id="nxQuickPick">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Quick Pick Menu 1.png" alt="Quick Pick Menu 1" />
+                                <figcaption>NX - Quick Pick Menu Fig. 1</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md my-auto">
+                            <p>To select an entity, move mouse over the entity of interest until it is highlighted with
+                                a magenta colour and click the left mouse button to select the geometric entity,
+                                feature, or component. If the entity is hidden behind the displayed geometry, position
+                                the mouse cursor close to that area on the screen, after a couple of seconds, the ball
+                                cursor turns into a plus symbol <i class="fa fa-plus"></i> as shown in the image. Click
+                                the left mouse button (MB1) to get Quick Pick dialog box as shown in the following
+                                figure below.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Quick Pick Menu 2.png" alt="Quick Pick Menu 2" />
+                                <figcaption>NX - Quick Pick Menu Fig. 2</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md my-auto">
+                            <p>From the Quick Pick dialog box one can cycle through geometry on the screen to select the
+                                item of interest. It’s a fast way to select internal geometry or geometry that is
+                                hidden.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h2 class="text-uq text-center">Absolute Coordinate System</h2>
+                <div id="nxAbsoluteCoordinateSystem">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Absolute Coordinate System: All objects are referenced from the absolute coordinate
+                                system. This is a fixed coordinate system and the locations and orientations of every
+                                object in NX modelling space are related back to this system.</p>
+                        </div>
+                        <div class="col-md">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/KkQodgdtXic?si=Mu_ep-eMUNd4FH_L"
+                                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center">Video - Siemens NX Curriculum - Absolute Coordinate System (3:10)</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h2 class="text-uq text-center">Work Coordinate System</h2>
+                <div id="nxWorkCoordinateSystem">
+                    <p>The Work Coordinate System is what you will use for construction when you want to determine
+                        orientations and angles of features. The axes of the WCS are denoted:</p>
+                    <ul>
+                        <li>XC</li>
+                        <li>YC</li>
+                        <li>ZC</li>
+                    </ul>
+                    <p>The C stands for current. It is possible to have multiple coordinate systems in a part file,
+                        <strong>but only one of them can be the work coordinate system</strong>.</p>
+                </div>
+                <h2 class="text-uq text-center">Further Reading - Optional</h2>
+                <h3 class="text-uq">User Preferences</h3>
+                <div id="nxUserPreferences">
+                    <p>Used for defining display parameter of new objects, name, layouts, and view. You can also set
+                        custom layer, colour, font and line widths for created objects and much more. User preference
+                        settings override customer defaults [site configuration] settings for the same functions.</p>
+                    <p>Command location:</p>
+                    <p>File <i class="fa fa-angle-right"></i> Preferences</p>
+                    <figure class="text-center d-block mx-auto" style="width: 30%">
+                        <img class="img-fluid" src="img/User Preferences.png" alt="NX - User Preferences" />
+                        <figcaption>NX - User Preferences</figcaption>
+                    </figure>
+                </div>
+                <h3 class="text-uq">Layers</h3>
+                <div id="nxLayers">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>Layers are used to store objects in a file, and work like containers to collect the
+                                objects in a structured and consistent manner. Unlike simple visual tools like Show and
+                                Hide, Layers provide a permanent way to organize and manage the visibility and
+                                select-ability of objects in your file.
+                                A Layer is a system-defined attribute such as colour, font, and width that all objects
+                                in NX must have. There are 256 usable layers in NX, one of which is always the Work
+                                Layer. Any of the 256 layers can be assigned to one of four classifications of status.
+                            </p>
+                            <ul>
+                                <li>Work</li>
+                                <li>Selectable</li>
+                                <li>Visible Only</li>
+                                <li>Invisible</li>
+                            </ul>
+                        </div>
+                        <div class="col-md">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/_mTBmRIvdd4?si=dLMskzAoz3ZBtkU0"
+                                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center">Video - Siemens NX Curriculum – Layer Control (6:41)</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-uq">Work With Multiple Open Parts</h3>
+                <div id="nxMultipleOpenParts">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Not only can you have multiple parts opened in NX and work on them individually, but you
+                                can also simultaneously view multiple parts. This is achieved by clicking:</p>
+                            <ol>
+                                <li>Window Layout on the Quick Access Toolbar at the top of screen and</li>
+                                <li>Choosing your preferred layout or dragging a selected display part tab to the centre
+                                    of the NX session, as demonstrated in the this video.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid" src="img/Mulitple Open Parts Example.png"
+                                    alt="Multiple Open Parts" />
+                                <figcaption>NX - Multiple Open Parts</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/QrJB5qrFJsg?si=xnTddu21KV-Sk-N_"
+                                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center">Siemens NX Curriculum - Multi Window Display (3:52)</p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="text-uq">Move The Work Coordinate System</h3>
+                <div id="nxMoveWorkCoordinateSystem">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>To move a component in relation to an existing Work Coordinate System, you can follow
+                                these steps:</p>
+                            <ol>
+                                <li>Hover the cursor over the component to reposition, then <strong>click MB3 <i
+                                            class="fa fa-angle-right"></i> Move</strong>. The Dynamic WCS will display
+                                    in the work area and the Move Component dialog will display.</li>
+                                <li>On the Move Component dialog, set <strong>Motion = Dynamic</strong>.</li>
+                                <li>In the work area hover the cursor over the cone shape at the end of the X, Y, or Z
+                                    axis on the Dynamic WCS.</li>
+                            </ol>
+                        </div>
+                        <div class="col-md">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/LDYA0znwp74?si=Lvf1vyRaWpjp3vI5"
+                                    title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <p class="text-center">Siemens NX Curriculum – Moving the Work Coordinate System (5:10)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             <!-- Tab page - Headings -->
             <!-- NX Sketching -->
             <div class="tab-pane fade" id="nxSketching" role="tabpanel">
                 <h1 class="text-uq text-center">Sketching</h1>
+                <h2 class="text-uq text-center">Introduction</h2>
+                <p>In this chapter, you will learn how to create and edit sketches in NX. Typically, Modelling starts
+                    from a 2D sketch which is then Extruded, Revolved or Swept to create solids. Complex shapes that are
+                    otherwise very difficult to model can in most cases be broken down into a combination [join, remove,
+                    intersect] of other smaller features which are based on 2D profiles. This chapter provides an
+                    overview of sketching concepts and practice exercises.</p>
+                <h3 class="text-uq">Overview of Sketch functionality</h3>
+                <div id="nxSketchOverview">
+                    <div class="row">
+                        <div class="col-md">
+                            <p>NX sketch is a feature with named set of curves sketched on a single plane joined
+                                together as a string that when swept form a solid (or surface) geometry. When sketching
+                                the 2d curves it is the design intent that is being captured, not the exact dimensions
+                                and geometric constraints. These are added after.</p>
+                            <p>After sketching is completed, dimensioned, and constrained it can be used to create a 3D
+                                shape. As an example, the sketch curves [i.e., the cross-section of the 3D geometry at
+                                that point] can be swept along a straight path as an Extrude feature, or circular path
+                                as a Revolve feature, or even a 3D path as a Sweep feature.</p>
+                            <div class="row">
+                                <div class="col-md">
+                                    <img class="img-fluid img-thumbnail" src="img/Overview Image 1.png"
+                                        alt="Sketching Image 1" />
+                                </div>
+                                <div class="col-md my-auto">
+                                    <img class="img-fluid img-thumbnail" src="img/Overview image 2.png"
+                                        alt="Sketching Image 2" />
+                                </div>
+                                <div class="col-md">
+                                    <img class="img-fluid img-thumbnail" src="img/Overview image 3.png"
+                                        alt="Sketching Image 3" />
+                                </div>
+                            </div>
+                            <p>NX is a history based parametric modeller so associativity is created between sketch and
+                                3D feature, the sketch
+                                [parent feature] can be modified and changes reflected in associated features, for
+                                example an extrude. [child
+                                feature]. The video below provides and overview of creating and modifying a sketch.</p>
+                        </div>
+                        <div class="col-md">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/5aeBEknmSAE?si=fGytio7XLJ2bTnxk"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h3 class="text-uq">Sketch Example - Mounting Bracket</h3>
+                <div id="nxSketchMountingBracket">
+                    <img class="img-fluid d-block mx-auto img-thumbnail" src="img/Mounting Bracket Image.png"
+                        alt="Mounting Bracket Image" />
+                    <button class="btn btn-primary d-block mx-auto w-75 mt-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mbReminders">Click to show/hide Mouse Button Functions</button>
+                    <div id="mbReminders" class="collapse">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="row">
+                                    <h3 class="text-uq">MB1 – Mouse Button 1</h3>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>The left mouse button is referred to as MB1 in these instructions.</li>
+                                            <li>It is used for Selection of icons, menus, and other entities on the
+                                                graphic screen.</li>
+                                            <li>Double clicking MB1 on any feature will automatically open the Edit
+                                                Dialog box.</li>
+                                            <li>Hovering over object and then clicking MB1 provides user to quick access
+                                                toolbar, as shown in the image picture.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 1 Demo.png"
+                                            alt="Mouse Button 1" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="row">
+                                    <h3 class="text-uq">MB1 – Mouse Button 2</h3>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>The middle mouse button or the scroll button is referred to as MB2 in
+                                                these instructions.</li>
+                                            <li>MB2 is used to rotate the object or, if held, zoom in and out by
+                                                dragging.</li>
+                                            <li>If it’s a scroll wheel, the object can be zoomed in and out by
+                                                scrolling.</li>
+                                            <li>Clicking on MB2 will also execute the double click event (or open)
+                                                without clicking twice a part.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img class="img-fluid img-thumbnail" src="img/NX - Mouse button 2 diagram.png"
+                                            alt="Mouse Button 2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="row">
+                                    <h3 class="text-uq">MB3 – Mouse Button 3</h3>
+                                    <div class="col-md">
+                                        <ul>
+                                            <li>The right mouse button is referred to as MB3 in these instructions.</li>
+                                            <li>MB3 is used to access the user interface pop-up menu.</li>
+                                            <li>You can access the selection options that pop up depending on the
+                                                object's mode in Application.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img class="img-fluid img-thumbnail" src="img/MB3 Example.png"
+                                            alt="Mouse Button 3" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="row">
+                                    <h3 class="text-uq">MB Combos – Mouse Button Combinations</h3>
+                                    <div class="col-md">
+                                        <p><strong>Zoom In/Out</strong></p>
+                                        <ul>
+                                            <li>Press and hold both MB1 and MB2 (simultaneously) + move up or down the
+                                                mouse</li>
+                                            <li>Press and hold both MB1 and mouse wheen (simultaneously) + move up or
+                                                down the</li>
+                                            <li>Press and hold the <span
+                                                    class="badge text-bg-secondary h6 border border-dark">Ctrl</span>
+                                                button and press and drag MB2</li>
+                                        </ul>
+                                        <p><strong>Pan</strong></p>
+                                        <ul>
+                                            <li>Press and hold both MB2 and MB3 simultaneously + move up or down the
+                                                mouse</li>
+                                            <li>Press and hold <span
+                                                    class="badge text-bg-secondary h6 border border-dark">Shift</span>
+                                                button + MB2 and then move up or down the mouse</li>
+                                        </ul>
+
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <img class="img-fluid img-thumbnail" src="img/Zoom.png" alt="Zoom" />
+                                        <img class="img-fluid img-thumbnail" src="img/Pan.png" alt="Zoom" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div id="nxSketchSelect1by1">
+                    <h3 class="text-uq">Selecting objects one by one</h3>
+                    <p>You can select objects by clicking them individually, one after another, in any order. You can
+                        select objects that are not connected to each other, and of different type, ie curve, surface,
+                        body etc. The following example shows how to select curves one by one in a sketch.</p>
+                    <ol>
+                        <li>
+                            <p>Move the cursor to the object that you want to select, as the cursor moves over an object
+                                the colour changes to the
+                                preselection colour (magenta) and you can now click to select the object.</p>
+                            <img class="img-fluid" src="img/Selecting Objects 1 by 1 image 1.png"
+                                alt="Selecting Objects 1 by 1 Step 1" />
+                        </li>
+                        <li>
+                            <p>Once selected the object colour changes to the selected object colour (orange).</p>
+                            <img class="img-fluid" src="img/Selecting Objects 1 by 1 image 2.png"
+                                alt="Selecting Objects 1 by 1 Step 2" />
+                        </li>
+                        <li>You can continue clicking curves to complete your selection.</li>
+                    </ol>
+                </div>
+                <hr />
+                <div id="nxDeselectingObjects">
+                    <h3 class="text-uq">Deselecting objects</h3>
+                    <ol>
+                        <li>To deselect a single object, press <span
+                                class="badge text-bg-secondary h6 border border-dark">Shift</span> key and click on a
+                            selected object.</li>
+                        <li>To deselect a group of objects, press <span
+                                class="badge text-bg-secondary h6 border border-dark">Shift</span> key and
+                            <strong>MB1</strong> and create selection box over the objects you want to
+                            deselect. Once they are highlighted, release the buttons and those objects will be
+                            deselected.</li>
+                        <li>To deselect all, do one of the following:
+                            <ul>
+                                <li>Click Deselect All on the Top Border bar <i class="fa fa-arrow-right"></i>
+                                    <span><img class="img-fluid" width="200px" height="auto"
+                                            src="img/Deselect All Menu.png" alt="NX - Deselect All Menu" /></span></li>
+                                <li>Press <span class="badge text-bg-secondary h6 border border-dark">Esc</span> key
+                                </li>
+                                <li>Click in the background of the graphics window with <strong>MB1</strong></li>
+                            </ul>
+                        </li>
+                </div>
+                <hr />
+                <div id="nxCreateNewPartFile">
+                    <h3 class="text-uq">Step 1 - Create a New Part File - <span><img class="img-fluid"
+                                src="img/Creates a new file button.png" alt="Create a new file button"></span></h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Stand-alone part file, metric units, based on model template, user home folder location,
+                                file name <strong>Bracket_sketch</strong></p>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Create a new part file.png"
+                                    alt="Create a new part file" />
+                                <figcaption>NX - Create a new part file</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                </div>
+                <hr />
+                <div id="nxSetRole">
+                    <h3 class="text-uq">Step 2 - Set Role - <span><img class="img-fluid" src="img/Roles button.png"
+                                alt="Roles button"></span></h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Resource Bar <i class="fa fa-angle-right"></i> Roles <i class="fa fa-angle-right"></i>
+                                Content</p>
+                            <p>Select <strong>Role Advanced</strong></p>
+                            <p>Change back to Part Navigator view by selecting Resource Bar <i
+                                    class="fa fa-angle-right"></i> Part Navigator</p>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Set Role.png" alt="Set Role" />
+                                <figcaption>NX - Set Role</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div id="nxCreateSketch">
+                    <h3 class="text-uq">Step 3 - Create Sketch - <span><img class="img-fluid w-10"
+                                src="img/Create a Sketch button.png" alt="Create a sketch button"></span></h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Ribbon Bar (Construction Group) <i class="fa fa-angle-right"></i> Sketch</p>
+                            <p>Chose default option <span><img class="img-fluid" src="img/On Plane icon.png"
+                                        alt="On Plane icon" /></span>. On-Plane.</p>
+                            <p>Select Top Plane [xy plane] for sketch plane and click OK.</p>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Create a Sketch.png"
+                                    alt="Create a Sketch" />
+                                <figcaption>NX - Create a Sketch</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div id="nxTipSketchPlane">
+                    <div class="alert alert-uq">
+                        <h3 class="text-center">Tip - Sketch Plane</h3>
+                        <div class="row mb-0">
+                            <div class="col-md">
+                                <h5>Sketch Plane Dialogue box</h5>
+                                <p>NX automatically selects the sketch origin and horizontal axis [Red arrow] based on
+                                    mouse position, as shown in the plane selection preview. Once plane is selected the
+                                    origin and horizontal axis can be changed and explicitly defined if necessary by
+                                    using the Orientation option in the Sketch Plane dialogue box.</p>
+                                <p>Note green ticks on Create Sketch dialog box next to Sketch Plane, Horizontal
+                                    Reference, Origin Point indicates that these inputs have been selected and applied.
+                                    To change any of them select them from Dialog box and make on screen selection as
+                                    necessary.</p>
+                                <h5>Sketch Function</h5>
+                                <p class="mb-0">Curves are drawn or projected to this sketch plane.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <figure class="text-center">
+                                    <img class="img-fluid" src="img/Sketch Function Image 1.png"
+                                        alt="Sketch Function" />
+                                    <figcaption>NX - Sketch Function</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nxTipSketchRibbonToolbar">
+                    <div class="alert alert-uq">
+                        <h3 class="text-center">Tip - Sketch Ribbon Toolbar</h3>
+                        <div class="row mb-0">
+                            <div class="col-md">
+                                <h5>Displaying the Toolbar</h5>
+                                <p>Once sketch feature is defined the main screen will change to the Sketching
+                                    Environment and the Sketch Ribbon Toolbar will be displayed as in the figure below.
+                                </p>
+                                <figure>
+                                    <img class="img-fluid w-100" src="img/Sketch Ribbon Toolbar.png"
+                                        alt="Search Ribbon Toolbar" />
+                                    <figcaption class="text-center">NX - Search Ribbon Toolbar</figcaption>
+                                </figure>
+                                <p><strong>Note</strong>: If your toolbar does not show as above icons then redo step 2
+                                    to set role to <strong>Advanced</strong></p>
+                                <p>Please ensure that <strong>Show Moveable</strong>, <strong>Relax Dimensions</strong>
+                                    and <strong>Relax Relations</strong> toggles are as shown in the picture above.
+                                    <strong>Show Moveable</strong> is toggled <strong>on</strong>, and the other two are
+                                    toggled off.</p>
+                                <p>In the following exercises, we only used a few commands with step by step instructions so that you can gain practice at sketching 2D profiles. However, it is highly recommended that you review the Siemens NX help section on Sketching after completing these exercises to further your understanding. To access Help Documentation, go to:</p>
+                                <p>Task <i class="fa fa-angle-right"></i> Help <i class="fa fa-angle-right"></i> NX Help.</p>
+                                <p>On the web page browse through the Design (CAD) <i class="fa fa-angle-right"></i> Sketch section to better understand sketch concepts and commands.</p>
+                            </div>
+                        </div>
+                        <hr />
+                        <h5>Dimensioning Toolbar</h5>
+                        <p>By default the dimensioning toolbar is not shown in the NX Sketch Ribbon Bar, as users are encourged to use the object-action method where you select the objects first and then apply the command action. As you select objects NX determines what actions the user may wish to perform and guides the user to these actions. In this Sketching example we will use both workflows to add dimensions so we will go through the process of adding the Dimension Toolbar.</p>
+                    </div>
+                </div>
+                <hr />
+                <div id="nxAddDimensionsToolbar">
+                    <h3 class="text-uq">Step 4 - Add Dimensions Toolbar</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Ribbon Bar (Solve Group) <i class="fa fa-angle-right"></i> Pull down arrow.</p>
+                            <p>Toggle <strong>Dimension Drop-Down on</strong></p>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img class="img-fluid img-thumbnail" src="img/Add Dimensions Toolbar.png" alt="Add Dimensions Toolbar" />
+                                <figcaption>NX - Add Dimensions Toolbar</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- NX 3D Modelling -->
             <div class="tab-pane fade" id="nx3DModelling" role="tabpanel">
